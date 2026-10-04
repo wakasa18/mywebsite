@@ -199,4 +199,18 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Vercel/production base URL. Falls back to localhost when APP_BASE_URL
+        // is not defined, so the same config still works for local development.
+        $baseURL = getenv('APP_BASE_URL');
+
+        if ($baseURL !== false && $baseURL !== '') {
+            $this->baseURL = rtrim($baseURL, '/') . '/';
+        }
+    }
 }
+

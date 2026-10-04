@@ -194,11 +194,39 @@ class Database extends Config
     {
         parent::__construct();
 
-        // Ensure that we always set the database group to 'tests' if
-        // we are currently running an automated test suite, so that
-        // we don't overwrite live data on accident.
+        // Always use the isolated test connection during automated tests.
         if (ENVIRONMENT === 'testing') {
             $this->defaultGroup = 'tests';
+            return;
+        }
+
+        // Vercel + Supabase PostgreSQL configuration. These values are read
+        // from Vercel Environment Variables and are only applied when DB_HOST
+        // is present, preserving the existing local MySQL configuration.
+        $host = getenv('DB_HOST');
+
+        if ($host !== false && $host !== '') {
+            $this->default = [
+                'DSN'          => '',
+                'hostname'     => $host,
+                'username'     => getenv('DB_USER') ?: '',
+                'password'     => getenv('DB_PASS') ?: '',
+                'database'     => getenv('DB_NAME') ?: 'postgres',
+                'schema'       => 'public',
+                'DBDriver'     => getenv('DB_DRIVER') ?: 'Postgre',
+                'DBPrefix'     => '',
+                'pConnect'     => false,
+                'DBDebug'      => ENVIRONMENT !== 'production',
+                'charset'      => 'utf8',
+                'swapPre'      => '',
+                'failover'     => [],
+                'port'         => (int) (getenv('DB_PORT') ?: 6543),
+                'dateFormat'   => [
+                    'date'     => 'Y-m-d',
+                    'datetime' => 'Y-m-d H:i:s',
+                    'time'     => 'H:i:s',
+                ],
+            ];
         }
     }
 }
