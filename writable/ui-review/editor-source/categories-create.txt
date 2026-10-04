@@ -1,0 +1,39 @@
+<?= $this->extend('layouts/staff') ?>
+<?= $this->section('content') ?>
+
+<div class="page-header" style="margin-bottom:20px;">
+    <h1 style="margin:0;">Add Category</h1>
+    <p class="muted" style="margin:6px 0 0;">Create a new product category for the system.</p>
+</div>
+
+<?= view('partials/form_messages') ?>
+
+<div class="card">
+    <div class="card-head">
+        <div>
+            <h2 style="margin:0;">Category Information</h2>
+            <p class="muted" style="margin:6px 0 0;">Enter details for the new category.</p>
+        </div>
+
+        <a class="btn secondary" href="<?= site_url('categories') ?>">← Back</a>
+    </div>
+
+    <form method="post" action="<?= site_url('categories/store') ?>">
+        <?= csrf_field() ?>
+
+        <div class="field">
+            <label class="label">Category Name *</label>
+            <input type="text" name="category_name" class="input" value="<?= old('category_name') ?>"
+                placeholder="e.g. Antibiotics, Vitamins, Syrups" maxlength="100" autocomplete="off" required>
+        </div>
+
+        <div class="sp"></div>
+
+        <div class="row" style="gap:10px;">
+            <button type="submit" class="btn btn-primary">Save Category</button>
+            <a href="<?= site_url('categories') ?>" class="btn secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<?= $this->endSection() ?>

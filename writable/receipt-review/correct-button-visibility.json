@@ -1,0 +1,38 @@
+[
+    {
+        "role": "admin",
+        "invoice": "INV-PREVIEW-101",
+        "status": "completed",
+        "correct_button_visible": true
+    },
+    {
+        "role": "admin",
+        "invoice": "INV-PREVIEW-102",
+        "status": "partially_refunded",
+        "correct_button_visible": false
+    },
+    {
+        "role": "admin",
+        "invoice": "EXC-101-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "completed",
+        "correct_button_visible": false
+    },
+    {
+        "role": "cashier",
+        "invoice": "INV-PREVIEW-101",
+        "status": "completed",
+        "correct_button_visible": false
+    },
+    {
+        "role": "cashier",
+        "invoice": "INV-PREVIEW-102",
+        "status": "partially_refunded",
+        "correct_button_visible": false
+    },
+    {
+        "role": "cashier",
+        "invoice": "EXC-101-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "completed",
+        "correct_button_visible": false
+    }
+]

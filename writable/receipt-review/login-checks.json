@@ -1,0 +1,152 @@
+[
+  {
+    "state": "normal",
+    "width": 320,
+    "dark": false
+  },
+  {
+    "state": "normal",
+    "width": 320,
+    "dark": true
+  },
+  {
+    "state": "normal",
+    "width": 390,
+    "dark": false
+  },
+  {
+    "state": "normal",
+    "width": 390,
+    "dark": true
+  },
+  {
+    "state": "normal",
+    "width": 768,
+    "dark": false
+  },
+  {
+    "state": "normal",
+    "width": 768,
+    "dark": true
+  },
+  {
+    "state": "normal",
+    "width": 1024,
+    "dark": false
+  },
+  {
+    "state": "normal",
+    "width": 1024,
+    "dark": true
+  },
+  {
+    "state": "normal",
+    "width": 1440,
+    "dark": false
+  },
+  {
+    "state": "normal",
+    "width": 1440,
+    "dark": true
+  },
+  {
+    "state": "error",
+    "width": 320,
+    "dark": false
+  },
+  {
+    "state": "error",
+    "width": 320,
+    "dark": true
+  },
+  {
+    "state": "error",
+    "width": 390,
+    "dark": false
+  },
+  {
+    "state": "error",
+    "width": 390,
+    "dark": true
+  },
+  {
+    "state": "error",
+    "width": 768,
+    "dark": false
+  },
+  {
+    "state": "error",
+    "width": 768,
+    "dark": true
+  },
+  {
+    "state": "error",
+    "width": 1024,
+    "dark": false
+  },
+  {
+    "state": "error",
+    "width": 1024,
+    "dark": true
+  },
+  {
+    "state": "error",
+    "width": 1440,
+    "dark": false
+  },
+  {
+    "state": "error",
+    "width": 1440,
+    "dark": true
+  },
+  {
+    "state": "success",
+    "width": 320,
+    "dark": false
+  },
+  {
+    "state": "success",
+    "width": 320,
+    "dark": true
+  },
+  {
+    "state": "success",
+    "width": 390,
+    "dark": false
+  },
+  {
+    "state": "success",
+    "width": 390,
+    "dark": true
+  },
+  {
+    "state": "success",
+    "width": 768,
+    "dark": false
+  },
+  {
+    "state": "success",
+    "width": 768,
+    "dark": true
+  },
+  {
+    "state": "success",
+    "width": 1024,
+    "dark": false
+  },
+  {
+    "state": "success",
+    "width": 1024,
+    "dark": true
+  },
+  {
+    "state": "success",
+    "width": 1440,
+    "dark": false
+  },
+  {
+    "state": "success",
+    "width": 1440,
+    "dark": true
+  }
+]

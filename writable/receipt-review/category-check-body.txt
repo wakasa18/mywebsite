@@ -1,0 +1,31 @@
+ const checks=[];
+ for(const variant of ['categories','categories-empty']) {
+  await send('Page.navigate',{url:`http://127.0.0.1:${port}/${variant}.html`});
+  for(let i=0;i<80;i++){if(await evaluate("document.readyState==='complete' && !!document.querySelector('.mobile-record-ready')"))break;await delay(100);}
+  assert.equal(await evaluate("!!document.querySelector('.mobile-record-ready')"),true);
+  for(const width of [320,375,390,600,700,768,1024,1440]) {
+   await send('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:false});
+   for(const dark of [false,true]) {
+    await evaluate(`document.documentElement.classList.toggle('dark',${dark})`);
+    await delay(80);
+    const state=await evaluate(`({overflow:document.documentElement.scrollWidth>innerWidth,cardMode:getComputedStyle(document.querySelector('.categories-table')).display==='block',tableOverflow:document.querySelector('.table-wrap').scrollWidth>document.querySelector('.table-wrap').clientWidth+2,hintVisible:!document.querySelector('.table-scroll-hint').hidden,buttonHeights:[...document.querySelectorAll('.category-search-actions .btn,.categories-table .record-actions .btn')].map(x=>x.getBoundingClientRect().height),clippedPills:[...document.querySelectorAll('.cat-pill')].some(x=>x.scrollWidth>x.clientWidth+2||x.getBoundingClientRect().right>x.closest('td').getBoundingClientRect().right+1),productWidths:[...document.querySelectorAll('.category-products')].map(x=>({width:x.getBoundingClientRect().width,row:x.closest('tr').getBoundingClientRect().width})),input:document.querySelector('#categorySearch').getBoundingClientRect().toJSON(),search:document.querySelector('.category-search-actions').getBoundingClientRect().toJSON(),title:document.querySelector('.record-title')?.getBoundingClientRect().toJSON()})`);
+    assert.equal(state.overflow,false,`${variant} page overflow ${width}`);
+    assert.equal(state.clippedPills,false,`${variant} clipped product ${width}`);
+    if(width<=700) {
+     assert.equal(state.cardMode,true);
+     assert.equal(state.tableOverflow,false,`${variant} mobile card overflow ${width}`);
+     assert.equal(state.hintVisible,false,`${variant} unexpected mobile scroll hint ${width}`);
+     for(const product of state.productWidths)assert.ok(product.width>product.row*.75,'Products need a full-width row');
+    } else assert.equal(state.cardMode,false);
+    if(width<=600){assert.ok(state.search.top>=state.input.bottom,'Search actions must be below input');assert.ok(state.buttonHeights.every(h=>h>=44),'Touch targets too small');}
+    checks.push({variant,width,dark,overflow:state.overflow,cardMode:state.cardMode});
+    if(variant==='categories'&&[390,768,1440].includes(width)) {
+     const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true});
+     fs.writeFileSync(path.join(dir,`categories-${width}-${dark?'dark':'light'}.png`),Buffer.from(shot.data,'base64'));
+    }
+   }
+  }
+ }
+ fs.writeFileSync(path.join(dir,'category-checks.json'),JSON.stringify(checks,null,2));
+ console.log(`Passed ${checks.length} category layouts: mobile/tablet/desktop, light/dark, long products and empty state.`);
+})().catch(error=>{console.error(error);process.exitCode=1;}).finally(()=>{ws?.close();chrome?.kill();server?.close();});

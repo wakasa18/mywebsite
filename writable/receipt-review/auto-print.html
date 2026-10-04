@@ -1,0 +1,122 @@
+<!-- DEBUG-VIEW START 14 APPPATH\Views\cashier\sales\receipt.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpeg" href="/assets/images/pharxmaco-favicon.jpg?v=20260923">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales receipt — INV-20260917-101805-D0360</title>
+    <script src="/assets/js/receipt-theme.js"></script>
+    <link rel="stylesheet" href="/assets/css/receipts.css?v=20260930-1">
+    <script src="/assets/js/receipts.js" defer></script>
+</head>
+<body class="receipt-page" data-paper-width="80" data-auto-print="true">
+<div class="receipt-shell">
+    <!-- DEBUG-VIEW START 10 APPPATH\Views\partials\receipt_toolbar.php -->
+<header class="receipt-toolbar">
+    <div class="receipt-heading">
+        <span class="receipt-heading-icon"><!-- DEBUG-VIEW START 8 APPPATH\Views\partials\icon.php -->
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3ZM9 7h6M9 11h6M9 15h3"/></svg>
+
+<!-- DEBUG-VIEW ENDED 8 APPPATH\Views\partials\icon.php -->
+</span>
+        <div><h1>Sales receipt</h1><p>Your purchase, item by item.</p></div>
+    </div>
+    <nav class="receipt-toolbar-actions" aria-label="Receipt actions">
+        <a href="http://localhost/pharxmacoo/public/cashier/sales/history" class="receipt-button">Sales history</a>
+        <button type="button" class="receipt-button receipt-button--primary" data-print-receipt><!-- DEBUG-VIEW START 9 APPPATH\Views\partials\icon.php -->
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9V3h12v6M6 18H3V9h18v9h-3M6 14h12v7H6zM17 12h.01"/></svg>
+
+<!-- DEBUG-VIEW ENDED 9 APPPATH\Views\partials\icon.php -->
+ Print</button>
+    </nav>
+</header>
+
+<!-- DEBUG-VIEW ENDED 10 APPPATH\Views\partials\receipt_toolbar.php -->
+    <main class="receipt-layout">
+        <div class="receipt-stage">
+            <article class="receipt-paper" aria-label="Sales receipt INV-20260917-101805-D0360">
+                <!-- DEBUG-VIEW START 11 APPPATH\Views\partials\receipt_header.php -->
+<header>
+    <div class="receipt-brand-row">
+        <div>
+            <p class="receipt-brand">Pharxmaco</p>
+            <div class="receipt-business-type">Drugstore</div>
+        </div>
+    </div>
+    <div class="receipt-branch">
+        <strong>Main Branch</strong>
+        <br>Santa Maria, Bulacan        <br>Tel: 09123456789    </div>
+    <div class="receipt-document-type">Sales receipt</div>
+</header>
+
+<!-- DEBUG-VIEW ENDED 11 APPPATH\Views\partials\receipt_header.php -->
+                <div class="receipt-status ">Payment recorded</div>
+                <hr class="receipt-rule">
+                <dl class="receipt-meta">
+                    <dt>Invoice number</dt><dd>INV-20260917-101805-D0360</dd>
+                                        <dt>Date &amp; time</dt><dd>September 17, 2026 at 10:18 AM</dd>
+                    <dt>Cashier</dt><dd>System Administrator</dd>
+                    <dt>Payment method</dt><dd>CASH</dd>
+                                    </dl>
+                <hr class="receipt-rule">
+                <table class="receipt-items" aria-label="Purchased items">
+                    <thead><tr><th scope="col">Item</th><th scope="col">Amount</th></tr></thead>
+                    <tbody>
+                                                <tr>
+                            <td>
+                                <div class="receipt-item-name">Carbocisteine 500mg Capsule</div>
+                                <div class="receipt-item-detail">2 × ₱125.00</div>
+                                <div class="receipt-item-detail">Discount: −₱25.00</div>                            </td>
+                            <td>₱250.00</td>
+                        </tr>
+                                                <tr>
+                            <td>
+                                <div class="receipt-item-name">Ascorbic Acid + Zinc 500mg / 10mg Film-coated Tablet</div>
+                                <div class="receipt-item-detail">5 × ₱41.00</div>
+                                <div class="receipt-item-detail">Discount: −₱20.50</div>                            </td>
+                            <td>₱205.00</td>
+                        </tr>
+                                            </tbody>
+                </table>
+                <table class="receipt-totals" aria-label="Payment totals">
+                    <tr><td>Subtotal</td><td>₱455.00</td></tr>
+                    <tr><td>Discount</td><td>−₱45.50</td></tr>                    <tr class="receipt-grand"><td>Total paid</td><td>₱409.50</td></tr>
+                                        <tr><td>Cash received</td><td>₱500.00</td></tr>
+                    <tr><td>Change</td><td>₱90.50</td></tr>
+                                    </table>
+                                                <hr class="receipt-rule">
+                <footer class="receipt-footer">
+                    <div class="receipt-thanks">Thank You!</div>
+                    Please keep this receipt as proof of purchase.<br />
+Items sold are non-returnable unless defective. Valid within 7 days.                    <span class="receipt-reference">INV-20260917-101805-D0360</span>
+                    Pharxmaco POS                </footer>
+            </article>
+            <p class="receipt-view-note">Enlarged for easy reading. Prints on <span data-paper-label>80 mm</span> paper.</p>
+        </div>
+        <!-- DEBUG-VIEW START 13 APPPATH\Views\partials\receipt_print_options.php -->
+<aside class="receipt-help" aria-label="Print and navigation options">
+    <h2>Keep a copy</h2>
+    <p>Print this document or choose “Save as PDF” in the print dialog.</p>
+    <fieldset class="receipt-print-options">
+        <legend>Thermal paper width</legend>
+        <label><input type="radio" name="receipt-paper-width" value="80" checked> 80 mm</label>
+        <label><input type="radio" name="receipt-paper-width" value="58"> 58 mm</label>
+    </fieldset>
+    <p>Choose the matching paper size in your printer settings. Turn off browser headers and footers.</p>
+    <button type="button" class="receipt-button receipt-button--primary" data-print-receipt><!-- DEBUG-VIEW START 12 APPPATH\Views\partials\icon.php -->
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9V3h12v6M6 18H3V9h18v9h-3M6 14h12v7H6zM17 12h.01"/></svg>
+
+<!-- DEBUG-VIEW ENDED 12 APPPATH\Views\partials\icon.php -->
+ Print receipt</button>
+    <a href="http://localhost/pharxmacoo/public/cashier/sales" class="receipt-button">New sale</a>
+    <a href="http://localhost/pharxmacoo/public/cashier/sales/view/1" class="receipt-button">Sale details</a>
+    </aside>
+
+<!-- DEBUG-VIEW ENDED 13 APPPATH\Views\partials\receipt_print_options.php -->
+    </main>
+</div>
+</body>
+</html>
+
+<!-- DEBUG-VIEW ENDED 14 APPPATH\Views\cashier\sales\receipt.php -->

@@ -1,0 +1,13 @@
+{
+    "route_targets_checked": 103,
+    "route_issues": [],
+    "local_schema": {
+        "users.session_version": true,
+        "sales.checkout_token_hash": true,
+        "refund_items.return_condition": true,
+        "refund_items.refund_method": true,
+        "refund_items.refund_event_id": true,
+        "suppliers.email": true
+    },
+    "auto_routing": false
+}

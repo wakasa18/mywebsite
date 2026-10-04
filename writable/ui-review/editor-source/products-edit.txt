@@ -1,0 +1,162 @@
+<?= $this->extend('layouts/staff') ?>
+<?= $this->section('content') ?>
+
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:20px;">
+    <div>
+        <h1>Edit Product</h1>
+        <p>Update product information and branch details.</p>
+    </div>
+    <a href="<?= site_url('products') ?>" class="btn btn-secondary">← Back</a>
+</div>
+
+<?= view('partials/form_messages') ?>
+
+<form method="post" action="<?= site_url('products/update/' . $product['id']) ?>">
+    <?= csrf_field() ?>
+    <input type="hidden" name="branch_id" value="<?= esc($branchId) ?>">
+
+    <div style="display:grid;grid-template-columns:var(--grid-sidebar-340);gap:18px;align-items:start;">
+
+        <!-- LEFT -->
+        <div>
+            <div class="card" style="margin-bottom:18px;">
+                <div class="card-head"><h2>Basic Information</h2></div>
+                <div class="card-body">
+                    <div style="display:grid;grid-template-columns:var(--grid-2col);gap:14px;">
+                        <div class="field">
+                            <label class="label">Product Name <span style="color:var(--danger);">*</span></label>
+                            <input type="text" name="product_name" class="input" maxlength="150" autocomplete="off"
+                                value="<?= old('product_name', $product['product_name']) ?>" required>
+                        </div>
+                        <div class="field">
+                            <label class="label">Category <span style="color:var(--danger);">*</span></label>
+                            <select name="category_id" class="input" required>
+                                <option value="">Select Category</option>
+                                <?php foreach ($categories as $cat): ?>
+                                    <option value="<?= esc($cat['id']) ?>"
+                                        <?= old('category_id', $product['category_id']) == $cat['id'] ? 'selected' : '' ?>>
+                                        <?= esc($cat['category_name']) ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:var(--grid-2col);gap:14px;">
+                        <div class="field">
+                            <label class="label">SKU</label>
+                            <input type="text" name="sku" class="input" maxlength="100" autocomplete="off"
+                                value="<?= old('sku', $product['sku']) ?>">
+                        </div>
+                        <div class="field">
+                            <label class="label">Unit <span style="color:var(--danger);">*</span></label>
+                            <input type="text" name="unit" class="input" maxlength="50" autocomplete="off"
+                                value="<?= old('unit', $product['unit']) ?>" required>
+                        </div>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:var(--grid-2col);gap:14px;">
+                        <div class="field">
+                            <label class="label">Cost Price <span style="color:var(--danger);">*</span></label>
+                            <input type="number" step="0.01" min="0" name="cost_price" class="input"
+                                value="<?= old('cost_price', $product['cost_price']) ?>" required>
+                        </div>
+                        <div class="field">
+                            <label class="label">Selling Price <span style="color:var(--danger);">*</span></label>
+                            <input type="number" step="0.01" min="0" name="price" class="input"
+                                value="<?= old('price', $product['price']) ?>" required>
+                        </div>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:var(--grid-2col);gap:14px;">
+                        <div class="field">
+                            <label class="label">Stock <span style="color:var(--danger);">*</span></label>
+                            <input type="number" min="0" name="stock" class="input"
+                                value="<?= old('stock', $branchProduct['stock'] ?? $product['stock']) ?>" required>
+                        </div>
+                        <div class="field">
+                            <label class="label">Reorder Level <span style="color:var(--danger);">*</span></label>
+                            <input type="number" min="0" name="reorder_level" class="input"
+                                value="<?= old('reorder_level', $branchProduct['reorder_level'] ?? $product['reorder_level']) ?>" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Reason for Stock Change</label>
+                        <input type="text" name="stock_reason" class="input" maxlength="255"
+                            value="<?= old('stock_reason') ?>" placeholder="Required only when changing the stock quantity">
+                        <span class="form-help">Examples: physical count, damaged items, or received delivery.</span>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:var(--grid-2col);gap:14px;">
+                        <div class="field">
+                            <label class="label">Expiration Date</label>
+                            <input type="date" name="expiration_date" class="input"
+                                value="<?= old('expiration_date', $branchProduct['expiration_date'] ?? '') ?>">
+                        </div>
+                        <div class="field">
+                            <label class="label">Status <span style="color:var(--danger);">*</span></label>
+                            <select name="status" class="input" required>
+                                <option value="active"   <?= old('status', $branchProduct['status'] ?? $product['status']) === 'active'   ? 'selected' : '' ?>>Active</option>
+                                <option value="inactive" <?= old('status', $branchProduct['status'] ?? $product['status']) === 'inactive' ? 'selected' : '' ?>>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manufacturer & Supplier -->
+            <div class="card">
+                <div class="card-head"><h2>Manufacturer & Supplier</h2></div>
+                <div class="card-body">
+                    <div class="field">
+                        <label class="label">Manufacturer</label>
+                        <input type="text" name="manufacturer" class="input" maxlength="150" autocomplete="organization"
+                            value="<?= old('manufacturer', $product['manufacturer'] ?? '') ?>"
+                            placeholder="e.g. Unilab, GSK, Pfizer">
+                    </div>
+                    <div class="field">
+                        <label class="label">Supplier</label>
+                        <select name="supplier_id" class="input">
+                            <option value="">— No Supplier —</option>
+                            <?php foreach ($suppliers as $sup): ?>
+                                <option value="<?= esc($sup['id']) ?>"
+                                    <?= old('supplier_id', $product['supplier_id'] ?? '') == $sup['id'] ? 'selected' : '' ?>>
+                                    <?= esc($sup['supplier_name']) ?>
+                                    <?= $sup['contact_person'] ? ' — ' . esc($sup['contact_person']) : '' ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                        <small style="font-size:12px;color:var(--muted);">
+                            <a href="<?= site_url('admin/suppliers/create') ?>" target="_blank">+ Add new supplier</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div style="position:sticky;top:80px;">
+            <div class="card" style="margin-bottom:14px;">
+                <div class="card-head"><h2>Branch</h2></div>
+                <div class="card-body">
+                    <p style="font-size:14px;color:var(--muted);">Editing branch:</p>
+                    <p style="font-weight:700;font-size:15px;margin-top:4px;">
+                        <?php
+                        $currentBranch = array_filter($branches, fn($b) => $b['id'] == $branchId);
+                        echo esc(reset($currentBranch)['branch_name'] ?? 'All Branches');
+                        ?>
+                    </p>
+                </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <button type="submit" class="btn btn-primary btn-lg btn-full">Update Product</button>
+                <a href="<?= site_url('products') ?>" class="btn btn-secondary btn-full" style="text-align:center;">Cancel</a>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<?= $this->endSection() ?>

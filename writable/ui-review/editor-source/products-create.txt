@@ -1,0 +1,232 @@
+<?= $this->extend('layouts/staff') ?>
+<?= $this->section('content') ?>
+
+<?php
+$isCashier = $isCashier ?? ((string) session('role') === 'cashier');
+$assignedBranch = $assignedBranch ?? null;
+$assignedBranchId = (int) ($assignedBranch['id'] ?? session('branch_id') ?? 0);
+$assignedBranchName = (string) ($assignedBranch['branch_name'] ?? 'Assigned branch');
+?>
+
+<style>
+    .product-create-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+        gap: 18px;
+        align-items: start;
+    }
+    .product-form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+    .product-create-side {
+        position: sticky;
+        top: 80px;
+    }
+    .assigned-branch-box {
+        border: 1px solid var(--border, #dbe4f0);
+        border-radius: 12px;
+        padding: 14px;
+        background: var(--surface-soft, #f8fafc);
+    }
+    .assigned-branch-box strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+    .product-role-note {
+        margin-bottom: 16px;
+        padding: 12px 14px;
+        border: 1px solid #bfdbfe;
+        border-radius: 12px;
+        background: #eff6ff;
+        color: #1e3a8a;
+        line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+        .product-create-layout {
+            grid-template-columns: 1fr;
+        }
+        .product-create-side {
+            position: static;
+        }
+    }
+    @media (max-width: 620px) {
+        .product-form-grid {
+            grid-template-columns: 1fr;
+        }
+        .product-create-actions .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:20px;">
+    <div>
+        <h1><?= $isCashier ? 'Add Product to Your Branch' : 'Add Product' ?></h1>
+        <p>
+            <?= $isCashier
+                ? 'Create a product record for ' . esc($assignedBranchName) . '. The branch cannot be changed.'
+                : 'Create a new product and assign it to a branch.' ?>
+        </p>
+    </div>
+    <a href="<?= site_url('products') ?>" class="btn btn-secondary">← Back</a>
+</div>
+
+<?= view('partials/form_messages') ?>
+
+<?php if ($isCashier): ?>
+    <div class="product-role-note">
+        <strong>Cashier branch protection:</strong>
+        This product will be added only to <strong><?= esc($assignedBranchName) ?></strong>.
+        When the SKU already belongs to an existing product, the system will add that product to your branch instead of creating a duplicate.
+        Ask an administrator when shared product information needs to be corrected later.
+    </div>
+<?php endif; ?>
+
+<form method="post" action="<?= site_url('products/store') ?>" id="product-create-form">
+    <?= csrf_field() ?>
+
+    <div class="product-create-layout">
+        <div>
+            <div class="card" style="margin-bottom:18px;">
+                <div class="card-head"><h2>Basic Information</h2></div>
+                <div class="card-body">
+                    <div class="product-form-grid">
+                        <div class="field">
+                            <label class="label">Product Name <span style="color:var(--danger);">*</span></label>
+                            <input type="text" name="product_name" class="input" maxlength="150" autocomplete="off"
+                                value="<?= old('product_name') ?>" required>
+                        </div>
+                        <div class="field">
+                            <label class="label">Category <span style="color:var(--danger);">*</span></label>
+                            <select name="category_id" class="input" required>
+                                <option value="">Select Category</option>
+                                <?php foreach ($categories as $cat): ?>
+                                    <option value="<?= esc($cat['id']) ?>" <?= old('category_id') == $cat['id'] ? 'selected' : '' ?>>
+                                        <?= esc($cat['category_name']) ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-form-grid">
+                        <div class="field">
+                            <label class="label">SKU</label>
+                            <input type="text" name="sku" class="input" maxlength="50" autocomplete="off"
+                                value="<?= old('sku') ?>" placeholder="Optional, but recommended">
+                            <span class="form-help">Use the same SKU when the product already exists in another branch.</span>
+                        </div>
+                        <div class="field">
+                            <label class="label">Unit <span style="color:var(--danger);">*</span></label>
+                            <input type="text" name="unit" class="input" maxlength="30" autocomplete="off"
+                                value="<?= old('unit') ?>" placeholder="e.g. box, tablet, bottle" required>
+                        </div>
+                    </div>
+
+                    <div class="product-form-grid">
+                        <div class="field">
+                            <label class="label">Cost Price <span style="color:var(--danger);">*</span></label>
+                            <input type="number" step="0.01" min="0" name="cost_price" class="input"
+                                value="<?= old('cost_price') ?>" required>
+                        </div>
+                        <div class="field">
+                            <label class="label">Selling Price <span style="color:var(--danger);">*</span></label>
+                            <input type="number" step="0.01" min="0" name="price" class="input"
+                                value="<?= old('price') ?>" required>
+                        </div>
+                    </div>
+
+                    <div class="product-form-grid">
+                        <div class="field">
+                            <label class="label">Initial Stock <span style="color:var(--danger);">*</span></label>
+                            <input type="number" min="0" name="stock" class="input"
+                                value="<?= old('stock', 0) ?>" required>
+                        </div>
+                        <div class="field">
+                            <label class="label">Reorder Level <span style="color:var(--danger);">*</span></label>
+                            <input type="number" min="0" name="reorder_level" class="input"
+                                value="<?= old('reorder_level', 0) ?>" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Expiration Date</label>
+                        <input type="date" name="expiration_date" class="input" value="<?= old('expiration_date') ?>">
+                        <span class="form-help">Leave blank only when the item has no applicable expiry date.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Manufacturer & Supplier</h2></div>
+                <div class="card-body">
+                    <div class="field">
+                        <label class="label">Manufacturer</label>
+                        <input type="text" name="manufacturer" class="input" maxlength="150" autocomplete="organization"
+                            value="<?= old('manufacturer') ?>" placeholder="e.g. Unilab, GSK, Pfizer">
+                    </div>
+                    <div class="field">
+                        <label class="label">Supplier</label>
+                        <select name="supplier_id" class="input">
+                            <option value="">— No Supplier —</option>
+                            <?php foreach ($suppliers as $sup): ?>
+                                <option value="<?= esc($sup['id']) ?>" <?= old('supplier_id') == $sup['id'] ? 'selected' : '' ?>>
+                                    <?= esc($sup['supplier_name']) ?>
+                                    <?= !empty($sup['contact_person']) ? ' — ' . esc($sup['contact_person']) : '' ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                        <?php if (!$isCashier): ?>
+                            <small style="font-size:12px;color:var(--muted);">
+                                <a href="<?= site_url('admin/suppliers/create') ?>" target="_blank" rel="noopener">+ Add new supplier</a>
+                            </small>
+                        <?php else: ?>
+                            <span class="form-help">Ask an administrator when the supplier is not yet listed.</span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-create-side">
+            <div class="card">
+                <div class="card-head"><h2>Branch Assignment</h2></div>
+                <div class="card-body">
+                    <?php if ($isCashier): ?>
+                        <input type="hidden" name="branch_id" value="<?= esc($assignedBranchId) ?>">
+                        <div class="assigned-branch-box">
+                            <strong><?= esc($assignedBranchName) ?></strong>
+                            <span class="form-help">Locked to the branch assigned to your cashier account.</span>
+                        </div>
+                    <?php else: ?>
+                        <div class="field">
+                            <label class="label">Assign to Branch <span class="required-mark">*</span></label>
+                            <select name="branch_id" class="input" required>
+                                <option value="">Select Branch</option>
+                                <?php foreach ($branches as $br): ?>
+                                    <option value="<?= esc($br['id']) ?>" <?= old('branch_id') == $br['id'] ? 'selected' : '' ?>>
+                                        <?= esc($br['branch_name']) ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <span class="form-help">Initial stock and expiry will be recorded for this branch.</span>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <div class="product-create-actions" style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+                <button type="submit" class="btn btn-primary btn-lg btn-full" data-busy-label="Saving…">
+                    <?= $isCashier ? 'Add to My Branch' : 'Save Product' ?>
+                </button>
+                <a href="<?= site_url('products') ?>" class="btn btn-secondary btn-full" style="text-align:center;">Cancel</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<?= $this->endSection() ?>

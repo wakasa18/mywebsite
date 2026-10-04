@@ -1,0 +1,66 @@
+/* Consistent table controls; colors follow the selected workspace theme. */
+.content table td .btn {
+    min-height: 36px;
+    padding: 8px 11px;
+    gap: 7px;
+    border: 1px solid var(--line-2);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-2);
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: background-color .15s, border-color .15s, color .15s;
+}
+.content table td .btn:hover { opacity: 1; background: var(--surface-2); border-color: var(--muted); }
+.content table td .btn:active { transform: none; }
+.content table td .btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+.content table td :is(.btn-primary, [data-table-action="view"], [data-table-action="edit"]) {
+    background: var(--primary-light); color: var(--primary-dark);
+    border-color: color-mix(in srgb, var(--primary) 35%, var(--line));
+}
+.content table td .btn-primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+html.dark .content table td :is([data-table-action="view"], [data-table-action="edit"]) { color: var(--primary); }
+.content table td :is(.btn-danger, .btn.danger, [data-table-action="delete"], [data-table-action="trash"]) {
+    background: var(--danger-bg); color: var(--danger-text);
+    border-color: color-mix(in srgb, var(--danger-text) 30%, var(--line));
+}
+.content table td :is(.btn-success, [data-table-action="restore"], [data-table-action="activate"]) {
+    background: var(--success-bg); color: var(--success-text);
+    border-color: color-mix(in srgb, var(--success-text) 30%, var(--line));
+}
+.content table td :is(.btn-warning, [data-table-action="pause"], [data-table-action="refund"]) {
+    background: var(--warning-bg); color: var(--warning-text);
+    border-color: color-mix(in srgb, var(--warning-text) 35%, var(--line));
+}
+.content table td .btn:hover:not(:disabled):not([aria-disabled="true"]) {
+    border-color: currentColor;
+    box-shadow: inset 0 0 0 1px currentColor;
+}
+.content table td .btn-primary:hover:not(:disabled) { background: var(--primary-dark); }
+.content table td .btn:is(:disabled, [aria-disabled="true"]) { opacity: .55; box-shadow: none; cursor: not-allowed; }
+.table-action-icon { width: 16px; height: 16px; flex: 0 0 16px; pointer-events: none; }
+.content table .table-action-group {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 8px !important; margin: 0; max-width: 380px;
+}
+.table-action-group > form { display: flex; margin: 0; }
+.table-action-group > .muted { font-size: 12px; }
+html.large-controls .content table td .btn { min-height: 44px; }
+html.high-contrast .content table td .btn { border-width: 2px; }
+@media (max-width: 700px) {
+    .content table td .btn { min-height: 44px; white-space: normal; overflow-wrap: anywhere; }
+    .content table .record-actions { padding-top: 12px; border-top: 1px solid var(--line); }
+    .content table .record-actions .table-action-group {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr));
+        align-items: stretch; width: 100%; max-width: none;
+    }
+    .table-action-group > :is(a, button, form) { min-width: 0; }
+    .table-action-group > form > .btn { width: 100%; }
+}
+@media (pointer: coarse) { .content table td .btn { min-height: 44px; } }
+@media (prefers-reduced-motion: reduce) { .content table td .btn { transition: none; } }
+html.reduce-motion .content table td .btn { transition: none; }

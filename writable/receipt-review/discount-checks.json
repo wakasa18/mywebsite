@@ -1,0 +1,8 @@
+[
+  "POS centavo rounding, threshold eligibility and invalid-discount checkout blocking",
+  "fixed quantity 8: blocked; original discount 20, total 30 preserved",
+  "fixed quantity 3: blocked; original discount 20, total 30 preserved",
+  "capped quantity 10: blocked; original discount 10, total 40 preserved",
+  "Legacy quantity changes blocked; unchanged quantities allow notes/payment corrections",
+  "Non-discounted sale quantities remain editable"
+]

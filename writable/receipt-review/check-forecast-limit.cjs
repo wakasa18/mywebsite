@@ -1,0 +1,11 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
+const source=fs.readFileSync('app/Views/admin/reports/index.php','utf8');
+const start=source.lastIndexOf('(function () {');
+const end=source.indexOf('</script>',start);
+const fields=Object.fromEntries(['reportDateFrom','reportDateTo','forecastDateFrom','forecastDateTo'].map(id=>[id,{value:id.endsWith('From')?'2024-09-23':'2026-09-23',addEventListener(){},getAttribute(){return '2026-09-27'}}]));
+vm.runInNewContext(source.slice(start,end),{document:{getElementById:id=>fields[id]},Date});
+assert.equal(fields.forecastDateFrom.min,'2024-09-23');
+assert.equal(fields.forecastDateFrom.max,'2026-09-23');
+assert.equal(fields.reportDateFrom.min,undefined);
+assert.ok(source.includes('Maximum: 24 months.'));
+console.log('Passed client checks: forecast minimum is 24 months before its end date; normal reports have no added cap.');

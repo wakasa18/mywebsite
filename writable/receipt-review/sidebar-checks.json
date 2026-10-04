@@ -1,0 +1,142 @@
+[
+  {
+    "role": "admin",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "admin",
+    "width": 320,
+    "height": 740,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "admin",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "admin",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "admin",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "admin",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "admin",
+    "width": 1440,
+    "height": 900,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "admin",
+    "width": 1440,
+    "height": 900,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "admin",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "admin",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "cashier",
+    "width": 320,
+    "height": 740,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "cashier",
+    "width": 320,
+    "height": 740,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "cashier",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "cashier",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "cashier",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "cashier",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "cashier",
+    "width": 1440,
+    "height": 900,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "cashier",
+    "width": 1440,
+    "height": 900,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  },
+  {
+    "role": "cashier",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "bg": "rgb(255, 255, 255)"
+  },
+  {
+    "role": "cashier",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "bg": "rgb(22, 30, 46)"
+  }
+]

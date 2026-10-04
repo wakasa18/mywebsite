@@ -1,0 +1,41 @@
+{
+  "sourceHash": "de55ee106251b74ea26e880def526c54388b523d579e5aa6e281dcfb06ba3319",
+  "sourceBytes": 452131,
+  "tables": [
+    "activity_logs",
+    "branches",
+    "branch_products",
+    "categories",
+    "discounts",
+    "forecasting_data",
+    "migrations",
+    "products",
+    "refund_items",
+    "report_exports",
+    "sales",
+    "sale_items",
+    "stock_logs",
+    "suppliers",
+    "users"
+  ],
+  "missingColumns": [
+    "products.is_deleted",
+    "products.permanently_deleted_at",
+    "products.is_permanently_deleted",
+    "branch_products.deleted_at",
+    "branch_products.is_deleted",
+    "branch_products.permanently_deleted_at",
+    "branch_products.is_permanently_deleted",
+    "categories.is_deleted",
+    "categories.permanently_deleted_at",
+    "categories.is_permanently_deleted",
+    "suppliers.is_deleted",
+    "suppliers.permanently_deleted_at",
+    "suppliers.is_permanently_deleted",
+    "discounts.is_deleted",
+    "discounts.permanently_deleted_at",
+    "discounts.is_permanently_deleted"
+  ],
+  "upgradePath": "database/upgrades/2026-10-03-all-latest-database-updates.sql",
+  "exportPath": "database/exports/u315645644_pharxmacotest-latest-2026-10-03.sql"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "root": "C:/UniServerZ/www/pharxmaco",
+    "files": [
+      {
+        "path": "app/Views/cashier/sales/history.php",
+        "present": true,
+        "sha256": "f9e5dd09f6f3d1d2ddf2968bd8b3741a50b9118c1b752eead657bc050d690085",
+        "hasCorrectionCode": false
+      },
+      {
+        "path": "app/Views/cashier/sales/details.php",
+        "present": false
+      },
+      {
+        "path": "app/Config/Routes.php",
+        "present": true,
+        "sha256": "b3ffcc9b9a69f6d2b54e0beb987224eb1ad68e66bd39058b80c95fae6286c5ac",
+        "hasCorrectionCode": false
+      },
+      {
+        "path": "app/Controllers/Admin/SaleCorrection.php",
+        "present": false
+      }
+    ]
+  },
+  {
+    "root": "C:/UniServerZ/www/pharxmacoo",
+    "files": [
+      {
+        "path": "app/Views/cashier/sales/history.php",
+        "present": true,
+        "sha256": "f5f22abc365a9101ef9414912692525050ff4bdab64794257d222238922abe55",
+        "hasCorrectionCode": true
+      },
+      {
+        "path": "app/Views/cashier/sales/details.php",
+        "present": true,
+        "sha256": "9f4f1d8839c7b08de264732f10e2084b0a720d73727eebb0baa154651687610a",
+        "hasCorrectionCode": true
+      },
+      {
+        "path": "app/Config/Routes.php",
+        "present": true,
+        "sha256": "057dc44abb92cf2088fdf08aa4ddd832af82692a8136b729f5768f462e46421f",
+        "hasCorrectionCode": true
+      },
+      {
+        "path": "app/Controllers/Admin/SaleCorrection.php",
+        "present": true,
+        "sha256": "848aec1a1938878a9c9123518d2e3512a1d4a4b92d1b902d13a42b0bf465c82a",
+        "hasCorrectionCode": true
+      }
+    ]
+  }
+]

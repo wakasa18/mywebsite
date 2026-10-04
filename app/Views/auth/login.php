@@ -1,0 +1,92 @@
+<?php
+// Keep submissions on the current host and support installations in a subfolder.
+$scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? '/index.php'));
+$basePath = rtrim(str_replace('\\', '/', dirname($scriptName)), '/');
+$loginAction = ($basePath === '' || $basePath === '.') ? '/login' : $basePath . '/login';
+$loginError = session()->getFlashdata('error');
+$loginSuccess = session()->getFlashdata('success');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="color-scheme" content="light dark">
+    <title>Sign in — Pharxmaco Drugstore</title>
+    <link rel="icon" type="image/jpeg" href="<?= base_url('assets/images/pharxmaco-favicon.jpg') ?>?v=20260923">
+    <script src="<?= base_url('assets/js/login.js') ?>?v=20260924-3"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url('assets/css/login.css') ?>?v=20260929-2">
+</head>
+<body>
+    <a class="login-skip" href="#username">Skip to sign in</a>
+    <div class="login-shell">
+        <header class="login-header">
+            <div class="login-brand"><img src="<?= base_url('assets/images/295259270_419609253521915_2551810649101629249_n.jpg') ?>" alt="" width="44" height="44"><div><strong>Pharxmaco<span class="brand-period">.</span></strong><span>Drugstore workspace</span></div></div>
+            <div class="login-header-tools"><span class="staff-label">Staff access</span><button type="button" id="loginThemeToggle" class="login-theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false" hidden><svg class="theme-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg><svg class="theme-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1"/></svg></button></div>
+        </header>
+        <p id="loginThemeNotice" class="theme-notice" role="status" hidden></p>
+
+        <main class="login-stage">
+            <section class="login-story" aria-labelledby="storyTitle">
+                <div class="story-topline"><span class="story-cross" aria-hidden="true">+</span><span>Made for your pharmacy</span><span class="story-line" aria-hidden="true"></span></div>
+                <h2 id="storyTitle">Every shelf.<br> Every sale.<br> <span>One workspace.</span></h2>
+                <p class="story-description">From the first sale to the last stock check.<br>A little more clarity for your everyday.</p>
+                <div class="pharmacy-art" aria-hidden="true">
+                    <svg viewBox="0 0 540 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M371 13v62h62v73h-62v62h-73v-62h-62V75h62V13z" fill="#fff" fill-opacity=".08"/>
+                        <path d="M44 254h446" stroke="#fff" stroke-opacity=".25"/>
+                        <g class="art-float art-card"><g transform="translate(44 61) rotate(-9 130 89)">
+                            <rect x="7" y="9" width="268" height="174" rx="16" fill="#103f9e" fill-opacity=".6"/>
+                            <rect width="268" height="174" rx="16" fill="#f4f8ff"/>
+                            <path d="M0 16C0 7.16 7.16 0 16 0h236c8.84 0 16 7.16 16 16v27H0z" fill="#dce9ff"/>
+                            <circle cx="21" cy="22" r="5" fill="#1555cf"/>
+                            <text x="37" y="26" fill="#18417a" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">PHARXMACO</text>
+                            <rect x="211" y="15" width="38" height="12" rx="6" fill="#aac6f2"/>
+                            <text x="21" y="71" fill="#102f56" font-family="sans-serif" font-size="16" font-weight="700">Everything in its place.</text>
+                            <g fill="#d2deec"><rect x="22" y="91" width="146" height="6" rx="3"/><rect x="22" y="116" width="117" height="6" rx="3"/><rect x="22" y="141" width="137" height="6" rx="3"/></g>
+                            <g stroke="#2166d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m226 91 4 4 8-8m-12 29 4 4 8-8m-12 29 4 4 8-8"/></g>
+                        </g></g>
+                        <g class="art-float art-bottle"><g transform="translate(344 113) rotate(12 55 65)">
+                            <rect x="5" y="19" width="103" height="119" rx="24" fill="#103f9e" fill-opacity=".45"/>
+                            <rect y="12" width="103" height="119" rx="24" fill="#d2f4e8"/>
+                            <rect x="13" width="77" height="26" rx="6" fill="#fff"/>
+                            <path d="M25 5v16m12-16v16M49 5v16M61 5v16M73 5v16" stroke="#ccdfde" stroke-width="2"/>
+                            <path d="M0 59h103v43H0z" fill="#fff"/>
+                            <path d="M44 66h15v10h10v15H59v10H44V91H34V76h10z" fill="#157858"/>
+                        </g></g>
+                        <g class="art-float art-capsule"><g transform="translate(256 224) rotate(-28)"><rect width="89" height="32" rx="16" fill="#d5f4e9"/><path d="M44.5 0H73a16 16 0 0 1 0 32H44.5z" fill="#87ccb9"/><path d="M12 9h19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></g>
+                        <path d="m451 50 6 6-6 6m-12-6h18M28 187v12m-6-6h12" stroke="#bce7ef" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="story-footer"><span>Point of sale</span><i aria-hidden="true"></i><span>Inventory</span><i aria-hidden="true"></i><span>Reports</span></div>
+            </section>
+
+            <section class="login-form-panel" aria-labelledby="loginTitle">
+                <div class="login-form-content">
+                    <div class="form-kicker"><span aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3h6v18h-6"/><path class="login-signin-arrow" d="M3 12h12m-5-5 5 5-5 5"/></svg></span> Staff sign in</div>
+                    <h1 id="loginTitle">Welcome back<span>.</span></h1>
+                    <p class="login-intro">Sign in with your staff account to get started.</p>
+
+                    <?php if ($loginError): ?><div class="login-alert login-alert-error" role="alert" id="loginError"><?= esc($loginError) ?></div><?php endif; ?>
+                    <?php if ($loginSuccess): ?><div class="login-alert login-alert-success" role="status"><?= esc($loginSuccess) ?></div><?php endif; ?>
+
+                    <form id="loginForm" method="post" action="<?= esc($loginAction, 'attr') ?>" autocomplete="on">
+                        <?= csrf_field() ?>
+                        <div class="login-field"><label for="username">Username</label><div class="login-input-wrap"><svg class="login-input-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a7 7 0 0 1 14 0v2"/></svg><input id="username" name="username" type="text" value="<?= old('username', '', 'attr') ?>" placeholder="Your username" required autocomplete="username" autocapitalize="none" spellcheck="false" enterkeyhint="next"></div></div>
+                        <div class="login-field"><label for="password">Password</label><div class="login-input-wrap"><svg class="login-input-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg><input id="password" name="password" type="password" placeholder="Your password" required autocomplete="current-password" enterkeyhint="go" aria-describedby="capsLockNotice"><button type="button" class="password-toggle" id="togglePass" aria-label="Show password" aria-pressed="false" aria-controls="password" hidden>Show</button></div><p class="caps-lock-notice" id="capsLockNotice" role="status" hidden>Caps Lock is on.</p></div>
+                        <button type="submit" class="login-submit" id="loginSubmit"><span id="loginSubmitLabel">Sign in</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+                    </form>
+                    <details class="login-help"><summary>Need help signing in?</summary><p>Ask your administrator to check your username, reset your password, or enable your account.</p></details>
+                    <div class="form-footnote"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6z"/><path d="m8 12 3 3 5-6"/></svg>For authorized pharmacy staff</div>
+                </div>
+            </section>
+        </main>
+        <footer class="login-footer"><span>Pharxmaco Drugstore</span><span>A little order. A lot of care.</span></footer>
+    </div>
+</body>
+</html>

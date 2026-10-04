@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "php": 167,
+    "js": 5,
+    "staticViews": 164,
+    "staticAssets": 15,
+    "appClasses": 48
+  },
+  "issues": [],
+  "environment": {
+    "CI_ENVIRONMENT": "development",
+    "app.baseURL": "http://localhost/pharxmacoo/public/",
+    "app.forceGlobalSecureRequests": "(using config default)",
+    "cookie.secure": "(using config default)",
+    "database.default.DBDebug": "(using config default)",
+    "databaseHostIsLocal": true,
+    "databaseUserIsRoot": true,
+    "databasePasswordConfigured": true
+  }
+}

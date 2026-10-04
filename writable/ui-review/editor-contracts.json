@@ -1,0 +1,1101 @@
+{
+    "editor-products-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/products\/store",
+            "post",
+            [
+                {
+                    "name": "product_name",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "category_id",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "sku",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "50"
+                },
+                {
+                    "name": "unit",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "30"
+                },
+                {
+                    "name": "cost_price",
+                    "type": "number",
+                    "value": "",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "price",
+                    "type": "number",
+                    "value": "",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "stock",
+                    "type": "number",
+                    "value": "0",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "reorder_level",
+                    "type": "number",
+                    "value": "0",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "expiration_date",
+                    "type": "date",
+                    "value": ""
+                },
+                {
+                    "name": "manufacturer",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "supplier_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "branch_id",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-products-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/products\/update\/1",
+            "post",
+            [
+                {
+                    "name": "branch_id",
+                    "type": "hidden",
+                    "value": "1"
+                },
+                {
+                    "name": "product_name",
+                    "type": "text",
+                    "value": "Paracetamol 500 mg tablets",
+                    "required": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "category_id",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "sku",
+                    "type": "text",
+                    "value": "PARA-500",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "unit",
+                    "type": "text",
+                    "value": "Tablet",
+                    "required": "",
+                    "maxlength": "50"
+                },
+                {
+                    "name": "cost_price",
+                    "type": "number",
+                    "value": "8",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "price",
+                    "type": "number",
+                    "value": "12.5",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "stock",
+                    "type": "number",
+                    "value": "20",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "reorder_level",
+                    "type": "number",
+                    "value": "10",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "stock_reason",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "255"
+                },
+                {
+                    "name": "expiration_date",
+                    "type": "date",
+                    "value": "2028-06-01"
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "manufacturer",
+                    "type": "text",
+                    "value": "Sample manufacturer",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "supplier_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-categories-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/categories\/store",
+            "post",
+            [
+                {
+                    "name": "category_name",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "100"
+                }
+            ]
+        ]
+    ],
+    "editor-categories-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/categories\/update\/1",
+            "post",
+            [
+                {
+                    "name": "category_name",
+                    "type": "text",
+                    "value": "Pain relief",
+                    "required": "",
+                    "maxlength": "100"
+                }
+            ]
+        ]
+    ],
+    "editor-admin-users-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/users\/store",
+            "post",
+            [
+                {
+                    "name": "full_name",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "username",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "50"
+                },
+                {
+                    "name": "password",
+                    "type": "password",
+                    "required": "",
+                    "maxlength": "255",
+                    "minlength": "8"
+                },
+                {
+                    "name": "confirm_password",
+                    "type": "password",
+                    "required": "",
+                    "maxlength": "255",
+                    "minlength": "8"
+                },
+                {
+                    "name": "role",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "admin",
+                            false
+                        ],
+                        [
+                            "cashier",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "branch_id",
+                    "disabled": "disabled",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-admin-users-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/users\/update\/1",
+            "post",
+            [
+                {
+                    "name": "full_name",
+                    "type": "text",
+                    "value": "Review User",
+                    "required": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "username",
+                    "type": "text",
+                    "value": "review",
+                    "required": "",
+                    "maxlength": "50"
+                },
+                {
+                    "name": "role",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "admin",
+                            false
+                        ],
+                        [
+                            "cashier",
+                            true
+                        ]
+                    ]
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "branch_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            true
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-admin-branches-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/branches\/store",
+            "post",
+            [
+                {
+                    "name": "branch_name",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "branch_code",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "20"
+                },
+                {
+                    "name": "contact_number",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "30"
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "address",
+                    "maxlength": "500",
+                    "text": ""
+                }
+            ]
+        ]
+    ],
+    "editor-admin-branches-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/branches\/update\/1",
+            "post",
+            [
+                {
+                    "name": "branch_name",
+                    "type": "text",
+                    "value": "Review Branch",
+                    "required": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "branch_code",
+                    "type": "text",
+                    "value": "REVIEW",
+                    "required": "",
+                    "maxlength": "20"
+                },
+                {
+                    "name": "contact_number",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "30"
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "address",
+                    "maxlength": "500",
+                    "text": ""
+                }
+            ]
+        ]
+    ],
+    "editor-admin-suppliers-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/suppliers\/store",
+            "post",
+            [
+                {
+                    "name": "supplier_name",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "contact_person",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "contact_number",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "30"
+                },
+                {
+                    "name": "email",
+                    "type": "email",
+                    "value": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "address",
+                    "maxlength": "500",
+                    "text": ""
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-admin-suppliers-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/suppliers\/update\/1",
+            "post",
+            [
+                {
+                    "name": "supplier_name",
+                    "type": "text",
+                    "value": "Review Supplier",
+                    "required": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "contact_person",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "contact_number",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "30"
+                },
+                {
+                    "name": "email",
+                    "type": "email",
+                    "value": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "address",
+                    "maxlength": "500",
+                    "text": ""
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-admin-discounts-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/discounts\/store",
+            "post",
+            [
+                {
+                    "name": "discount_name",
+                    "type": "text",
+                    "value": "Sample discount",
+                    "required": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "description",
+                    "maxlength": "500",
+                    "text": ""
+                },
+                {
+                    "name": "discount_type",
+                    "required": "",
+                    "options": [
+                        [
+                            "percentage",
+                            true
+                        ],
+                        [
+                            "fixed",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "discount_value",
+                    "type": "number",
+                    "value": "",
+                    "required": "",
+                    "min": "0.01",
+                    "step": "0.01"
+                },
+                {
+                    "name": "max_discount_amount",
+                    "type": "number",
+                    "value": "",
+                    "min": "0.01",
+                    "step": "0.01"
+                },
+                {
+                    "name": "applies_to",
+                    "required": "",
+                    "options": [
+                        [
+                            "all",
+                            true
+                        ],
+                        [
+                            "category",
+                            false
+                        ],
+                        [
+                            "product",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "category_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "product_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "start_date",
+                    "type": "date",
+                    "value": ""
+                },
+                {
+                    "name": "end_date",
+                    "type": "date",
+                    "value": ""
+                },
+                {
+                    "name": "minimum_purchase",
+                    "type": "number",
+                    "value": "",
+                    "min": "0",
+                    "step": "0.01"
+                }
+            ]
+        ]
+    ],
+    "editor-admin-discounts-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/discounts\/update\/1",
+            "post",
+            [
+                {
+                    "name": "discount_name",
+                    "type": "text",
+                    "value": "Sample discount",
+                    "required": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "description",
+                    "maxlength": "500",
+                    "text": ""
+                },
+                {
+                    "name": "discount_type",
+                    "required": "",
+                    "options": [
+                        [
+                            "percentage",
+                            true
+                        ],
+                        [
+                            "fixed",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "discount_value",
+                    "type": "number",
+                    "value": "",
+                    "required": "",
+                    "min": "0.01",
+                    "step": "0.01"
+                },
+                {
+                    "name": "max_discount_amount",
+                    "type": "number",
+                    "value": "",
+                    "min": "0.01",
+                    "step": "0.01"
+                },
+                {
+                    "name": "applies_to",
+                    "required": "",
+                    "options": [
+                        [
+                            "all",
+                            true
+                        ],
+                        [
+                            "category",
+                            false
+                        ],
+                        [
+                            "product",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "category_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "product_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "start_date",
+                    "type": "date",
+                    "value": ""
+                },
+                {
+                    "name": "end_date",
+                    "type": "date",
+                    "value": ""
+                },
+                {
+                    "name": "minimum_purchase",
+                    "type": "number",
+                    "value": "",
+                    "min": "0",
+                    "step": "0.01"
+                }
+            ]
+        ]
+    ],
+    "editor-admin-users-password": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/users\/password-update\/1",
+            "post",
+            [
+                {
+                    "name": "password",
+                    "type": "password",
+                    "required": "",
+                    "maxlength": "255",
+                    "minlength": "8"
+                },
+                {
+                    "name": "confirm_password",
+                    "type": "password",
+                    "required": "",
+                    "maxlength": "255",
+                    "minlength": "8"
+                }
+            ]
+        ]
+    ],
+    "editor-admin-branch_inventory-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/branch-inventory\/update\/1",
+            "post",
+            [
+                {
+                    "name": "stock",
+                    "type": "number",
+                    "value": "20",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "reorder_level",
+                    "type": "number",
+                    "value": "10",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "price",
+                    "type": "number",
+                    "value": "12.5",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "cost_price",
+                    "type": "number",
+                    "value": "8",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "expiration_date",
+                    "type": "date",
+                    "value": "2028-06-01"
+                },
+                {
+                    "name": "correction_reason",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "255"
+                },
+                {
+                    "name": "status",
+                    "required": "",
+                    "options": [
+                        [
+                            "active",
+                            true
+                        ],
+                        [
+                            "inactive",
+                            false
+                        ]
+                    ]
+                }
+            ]
+        ]
+    ],
+    "editor-admin-stock_transfer-create": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/stock-transfer\/store",
+            "post",
+            [
+                {
+                    "name": "from_branch_id",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "to_branch_id",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "items[0][product_id]",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ],
+                        [
+                            "1",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "items[0][quantity]",
+                    "type": "number",
+                    "required": "",
+                    "min": "1"
+                },
+                {
+                    "name": "notes",
+                    "text": ""
+                }
+            ]
+        ]
+    ],
+    "editor-admin-sale_correction-edit": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/admin\/sale-correction\/update\/1",
+            "post",
+            [
+                {
+                    "name": "payment_method",
+                    "required": "",
+                    "options": [
+                        [
+                            "cash",
+                            true
+                        ],
+                        [
+                            "gcash",
+                            false
+                        ],
+                        [
+                            "card",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "reference_no",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "100"
+                },
+                {
+                    "name": "notes",
+                    "maxlength": "500",
+                    "text": ""
+                },
+                {
+                    "name": "correction_reason",
+                    "required": "",
+                    "maxlength": "500",
+                    "text": ""
+                }
+            ]
+        ]
+    ],
+    "editor-products-cashier": [
+        [
+            "http:\/\/localhost\/pharxmacoo\/public\/products\/store",
+            "post",
+            [
+                {
+                    "name": "product_name",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "category_id",
+                    "required": "",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "sku",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "50"
+                },
+                {
+                    "name": "unit",
+                    "type": "text",
+                    "value": "",
+                    "required": "",
+                    "maxlength": "30"
+                },
+                {
+                    "name": "cost_price",
+                    "type": "number",
+                    "value": "",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "price",
+                    "type": "number",
+                    "value": "",
+                    "required": "",
+                    "min": "0",
+                    "step": "0.01"
+                },
+                {
+                    "name": "stock",
+                    "type": "number",
+                    "value": "0",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "reorder_level",
+                    "type": "number",
+                    "value": "0",
+                    "required": "",
+                    "min": "0"
+                },
+                {
+                    "name": "expiration_date",
+                    "type": "date",
+                    "value": ""
+                },
+                {
+                    "name": "manufacturer",
+                    "type": "text",
+                    "value": "",
+                    "maxlength": "150"
+                },
+                {
+                    "name": "supplier_id",
+                    "options": [
+                        [
+                            "",
+                            false
+                        ]
+                    ]
+                },
+                {
+                    "name": "branch_id",
+                    "type": "hidden",
+                    "value": "1"
+                }
+            ]
+        ]
+    ]
+}

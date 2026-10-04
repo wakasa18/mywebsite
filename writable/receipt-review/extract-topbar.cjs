@@ -1,0 +1,10 @@
+const fs = require('fs');
+const file = 'app/Views/layouts/staff.php';
+let text = fs.readFileSync(file,'utf8');
+const start = text.indexOf('        <header class="topbar">');
+const end = text.indexOf('        </header>',start) + '        </header>'.length;
+if(start<0||end<start)throw Error('Topbar missing');
+fs.writeFileSync('app/Views/layouts/topbar.php',text.slice(start,end)+'\n');
+text = text.slice(0,start) + "        <?= view('layouts/topbar', compact('role', 'fullName', 'branchName', 'displayRole', 'initials', 'layoutFullName', 'layoutBusinessName', 'notificationData')) ?>" + text.slice(end);
+text = text.replace('    <link rel="stylesheet" href="<?= base_url(\'assets/css/sidebar.css\') ?>?v=20260921">', '    <link rel="stylesheet" href="<?= base_url(\'assets/css/sidebar.css\') ?>?v=20260922">\n    <link rel="stylesheet" href="<?= base_url(\'assets/css/topbar.css\') ?>?v=20260922">\n    <script src="<?= base_url(\'assets/js/topbar.js\') ?>?v=20260922" defer></script>');
+fs.writeFileSync(file,text);

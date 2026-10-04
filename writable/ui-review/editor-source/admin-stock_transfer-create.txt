@@ -1,0 +1,134 @@
+<?= $this->extend('layouts/staff') ?>
+<?= $this->section('content') ?>
+
+<div class="card">
+    <div class="card-head">
+        <div>
+            <h2>Create Stock Transfer</h2>
+            <p>Move product inventory from one branch to another.</p>
+        </div>
+
+        <a href="<?= site_url('admin/stock-transfer') ?>" class="btn secondary">Back</a>
+    </div>
+
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert danger">
+            <?= esc(session()->getFlashdata('error')) ?>
+        </div>
+        <div class="sp"></div>
+    <?php endif; ?>
+
+    <form method="post" action="<?= site_url('admin/stock-transfer/store') ?>">
+        <?= csrf_field() ?>
+
+        <div class="row" style="gap:16px;">
+            <div style="flex:1; min-width:260px;">
+                <label class="label">From Branch</label>
+                <select name="from_branch_id" class="input" required>
+                    <option value="">Select Branch</option>
+                    <?php foreach ($branches as $branch): ?>
+                        <option value="<?= esc($branch['id']) ?>">
+                            <?= esc($branch['branch_name']) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div style="flex:1; min-width:260px;">
+                <label class="label">To Branch</label>
+                <select name="to_branch_id" class="input" required>
+                    <option value="">Select Branch</option>
+                    <?php foreach ($branches as $branch): ?>
+                        <option value="<?= esc($branch['id']) ?>">
+                            <?= esc($branch['branch_name']) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="sp"></div>
+
+        <label class="label">Transfer Items</label>
+
+        <div id="transferItems">
+            <div class="row transfer-row" style="gap:12px; margin-bottom:12px;">
+                <div style="flex:1; min-width:280px;">
+                    <select name="items[0][product_id]" class="input" required>
+                        <option value="">Select Product</option>
+                        <?php foreach ($products as $product): ?>
+                            <option value="<?= esc($product['id']) ?>">
+                                <?= esc($product['product_name']) ?> (
+                                <?= esc($product['sku'] ?: '-') ?>)
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div style="width:160px;">
+                    <input type="number" name="items[0][quantity]" class="input" min="1" placeholder="Quantity"
+                        required>
+                </div>
+
+                <div>
+                    <button type="button" class="btn danger remove-item">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="addItemBtn" class="btn secondary">+ Add Item</button>
+
+        <div class="sp"></div>
+
+        <div class="field">
+            <label class="label">Notes</label>
+            <textarea name="notes" class="input" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Transfer</button>
+        <a href="<?= site_url('admin/stock-transfer') ?>" class="btn secondary">Cancel</a>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const container = document.getElementById('transferItems');
+        const addBtn = document.getElementById('addItemBtn');
+        let index = 1;
+
+        addBtn.addEventListener('click', function () {
+            const row = document.createElement('div');
+            row.className = 'row transfer-row';
+            row.style = 'gap:12px; margin-bottom:12px;';
+            row.innerHTML = `
+            <div style="flex:1; min-width:280px;">
+                <select name="items[${index}][product_id]" class="input" required>
+                    <option value="">Select Product</option>
+                    <?php foreach ($products as $product): ?>
+                        <option value="<?= esc($product['id']) ?>"><?= esc($product['product_name']) ?> (<?= esc($product['sku'] ?: '-') ?>)</option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div style="width:160px;">
+                <input type="number" name="items[${index}][quantity]" class="input" min="1" placeholder="Quantity" required>
+            </div>
+            <div>
+                <button type="button" class="btn danger remove-item">Remove</button>
+            </div>
+        `;
+            container.appendChild(row);
+            index++;
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('remove-item')) {
+                const rows = document.querySelectorAll('.transfer-row');
+                if (rows.length > 1) {
+                    e.target.closest('.transfer-row').remove();
+                }
+            }
+        });
+    });
+</script>
+
+<?= $this->endSection() ?>

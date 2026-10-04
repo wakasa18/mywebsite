@@ -1,0 +1,36 @@
+.paginationWrap { width: 100%; min-width: 0; margin-top: 0; }
+.app-pagination { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px 22px; width: 100%; min-width: 0; padding: 18px 20px; border-top: 1px solid var(--line); color: var(--text-2); }
+.app-pagination *, .app-pagination *::before, .app-pagination *::after { box-sizing: border-box; }
+.pg-summary { display: flex; flex-direction: column; gap: 3px; font-size: 12px; line-height: 1.6; font-variant-numeric: tabular-nums; }
+.pg-results { color: var(--muted); }.pg-results strong { color: var(--text); font-weight: 700; }
+.pg-position { color: var(--muted); font-size: 11px; }
+.pg-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; max-width: 100%; }
+.pg-pages { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.pg-pages li { display: flex; }
+.app-pagination .pg-control { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; gap: 5px; min-width: 44px; min-height: 44px; padding: 9px 12px; border: 1px solid var(--line-2); border-radius: 9px; background: var(--surface); color: var(--text-2); font: 700 13px/1.4 var(--heading-font); font-variant-numeric: tabular-nums; text-decoration: none; }
+.app-pagination .pg-control svg { flex: 0 0 16px; }
+.app-pagination .pg-first, .app-pagination .pg-last { padding-inline: 10px; }
+.app-pagination a.pg-control:hover { color: var(--primary); background: var(--primary-light); border-color: var(--primary); }
+.app-pagination a.pg-control:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+.app-pagination .pg-current { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.app-pagination .pg-disabled { background: var(--surface-2); border-color: var(--line); color: var(--muted); opacity: .55; cursor: default; }
+html[data-text-size="large"] .app-pagination .pg-control { font-size: 14px; }
+html[data-text-size="extra-large"] .app-pagination .pg-control { font-size: 15px; }
+html.large-controls .app-pagination .pg-control { min-height: 48px; min-width: 48px; }
+@media (max-width: 700px) {
+    .app-pagination { flex-direction: column; align-items: stretch; gap: 12px; padding: 16px 12px; }
+    .pg-summary { flex-direction: row; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+    .pg-position { font-size: 12px; }
+    .pg-controls { display: grid; grid-template-columns: 44px minmax(0,1fr) minmax(0,1fr) 44px; gap: 6px; }
+    .app-pagination .pg-pages { display: none; }
+    .app-pagination .pg-control { padding-inline: 6px; font-size: 12px; }
+    .pg-controls:not(:has(.pg-first)) { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    html.large-controls .pg-controls { grid-template-columns: 48px minmax(0,1fr) minmax(0,1fr) 48px; }
+    html.large-controls .pg-controls:not(:has(.pg-first)) { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 380px) {
+    .pg-summary { flex-direction: column; align-items: center; }
+    .app-pagination { padding-inline: 8px; }
+    .app-pagination .pg-previous svg, .app-pagination .pg-next svg { display: none; }
+}
+@media print { .app-pagination { display: none; } }

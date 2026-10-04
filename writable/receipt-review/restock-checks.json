@@ -1,0 +1,146 @@
+[
+  {
+    "state": "restock",
+    "width": 320,
+    "height": 780,
+    "dark": false
+  },
+  {
+    "state": "restock",
+    "width": 320,
+    "height": 780,
+    "dark": true
+  },
+  {
+    "state": "restock",
+    "width": 390,
+    "height": 844,
+    "dark": false
+  },
+  {
+    "state": "restock",
+    "width": 390,
+    "height": 844,
+    "dark": true
+  },
+  {
+    "state": "restock",
+    "width": 768,
+    "height": 900,
+    "dark": false
+  },
+  {
+    "state": "restock",
+    "width": 768,
+    "height": 900,
+    "dark": true
+  },
+  {
+    "state": "restock",
+    "width": 1024,
+    "height": 900,
+    "dark": false
+  },
+  {
+    "state": "restock",
+    "width": 1024,
+    "height": 900,
+    "dark": true
+  },
+  {
+    "state": "restock",
+    "width": 1440,
+    "height": 1000,
+    "dark": false
+  },
+  {
+    "state": "restock",
+    "width": 1440,
+    "height": 1000,
+    "dark": true
+  },
+  {
+    "state": "restock",
+    "width": 844,
+    "height": 390,
+    "dark": false
+  },
+  {
+    "state": "restock",
+    "width": 844,
+    "height": 390,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 320,
+    "height": 780,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 320,
+    "height": 780,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 768,
+    "height": 900,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 768,
+    "height": 900,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 1024,
+    "height": 900,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 1024,
+    "height": 900,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 1440,
+    "height": 1000,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 1440,
+    "height": 1000,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": true
+  }
+]

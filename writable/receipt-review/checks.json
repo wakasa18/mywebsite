@@ -1,0 +1,546 @@
+[
+  {
+    "variant": "sale",
+    "width": 320,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 300
+  },
+  {
+    "variant": "sale",
+    "width": 320,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 320,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 390,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 370
+  },
+  {
+    "variant": "sale",
+    "width": 390,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 390,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 768,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 432
+  },
+  {
+    "variant": "sale",
+    "width": 768,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 768,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 1440,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 440
+  },
+  {
+    "variant": "sale",
+    "width": 1440,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "sale",
+    "width": 1440,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 320,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 300
+  },
+  {
+    "variant": "reprint",
+    "width": 320,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 320,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 390,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 370
+  },
+  {
+    "variant": "reprint",
+    "width": 390,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 390,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 768,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 432
+  },
+  {
+    "variant": "reprint",
+    "width": 768,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 768,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 1440,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 440
+  },
+  {
+    "variant": "reprint",
+    "width": 1440,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "reprint",
+    "width": 1440,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 320,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 300
+  },
+  {
+    "variant": "refund",
+    "width": 320,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 320,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 390,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 370
+  },
+  {
+    "variant": "refund",
+    "width": 390,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 390,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 768,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 432
+  },
+  {
+    "variant": "refund",
+    "width": 768,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 768,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 1440,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 440
+  },
+  {
+    "variant": "refund",
+    "width": 1440,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "refund",
+    "width": 1440,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 320,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 300
+  },
+  {
+    "variant": "full-refund",
+    "width": 320,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 320,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 390,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 370
+  },
+  {
+    "variant": "full-refund",
+    "width": 390,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 390,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 768,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 432
+  },
+  {
+    "variant": "full-refund",
+    "width": 768,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 768,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 1440,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 440
+  },
+  {
+    "variant": "full-refund",
+    "width": 1440,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "full-refund",
+    "width": 1440,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 320,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 300
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 320,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 320,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 390,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 370
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 390,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 390,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 768,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 432
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 768,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 768,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 1440,
+    "overflow": false,
+    "peso": true,
+    "buttons": true,
+    "paper": 440
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 1440,
+    "theme": "dark",
+    "paper": "rgb(22, 30, 46)",
+    "text": "rgb(232, 237, 245)",
+    "button": "rgb(77, 159, 255)",
+    "overflow": false
+  },
+  {
+    "variant": "legacy-refund",
+    "width": 1440,
+    "theme": "light",
+    "paper": "rgb(255, 255, 255)",
+    "text": "rgb(19, 43, 59)",
+    "button": "rgb(33, 102, 209)",
+    "overflow": false
+  },
+  {
+    "themeSync": "real storage event across documents; app settings event; all dark accents"
+  },
+  {
+    "print": "58",
+    "paper": 219.203125,
+    "toolbar": "none",
+    "aside": "none"
+  },
+  {
+    "print": "80",
+    "paper": 302.359375,
+    "toolbar": "none",
+    "aside": "none"
+  },
+  {
+    "preview": "quantity, condition, payout updates; 320/768/1440 widths"
+  },
+  {
+    "systemTheme": "restored before rendering; OS changes applied; malformed settings tolerated"
+  },
+  {
+    "autoPrint": "one invocation after load; width preference restored"
+  }
+]

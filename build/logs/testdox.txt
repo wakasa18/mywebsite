@@ -1,0 +1,147 @@
+Business Logic
+ [x] Trash and restore retain every deletable record and references
+ [x] Models reject permanent deletion and unscoped trash
+ [x] Flag only and legacy trash are excluded and paginate correctly
+ [x] Permanent delete endpoints require trash and administrator
+ [x] Restore controllers clear both deletion markers
+ [x] Permanent deletion hides records from trash but retains all references
+ [x] Permanent delete controllers retain used records and reject restoration
+ [x] Permanent deletion rolls back if audit cannot be written
+ [x] Permanent branch deletion retains stock and other branches
+ [x] Permanent branch deletion requires trash and does not guess branch
+ [x] Permanent branch deletion rolls back on audit failure
+ [x] Legacy permanent deletion requires explicit shared action
+ [x] Permanent delete migration is additive and repeatable
+ [x] Resetting permanent flag allows restore without erasing timestamp
+ [x] Branch flag reset returns only selected assignment to trash and pos
+ [x] Permanent flag alone hides rows when timestamps are missing
+ [x] Historical permanent dates do not hide recovered inventory
+ [x] Permanent flag migration backfills once and preserves recovery
+ [x] Soft delete migration backfills without losing flags or data
+ [x] Flag only branch trash is isolated and cannot be sold or changed
+ [x] Flag only trash is rechecked at checkout lock
+ [x] Branch trash and restore keep other branches and shared details
+ [x] Branch trash controller requires branch and administrator
+ [x] Branch trash rollback preserves inventory if audit fails
+ [x] Branch trash lists only selected branch and keeps legacy restore explicit
+ [x] Branch trash is excluded from pos expiry dashboard and replacement selection
+ [x] Branch trash is rechecked at checkout lock
+ [x] Branch trash migration can run twice without changing inventory
+ [x] Catalog assignment reuses master and keeps branches separate
+ [x] Catalog assignment accepts no sku and zero stock
+ [x] Catalog assignment rejects invalid input and unavailable records
+ [x] Catalog assignment rolls back when audit fails
+ [x] Catalog browse search and selection exclude assigned inactive and deleted products
+ [x] Expiry replacement preserves old expiry and records both movements once
+ [x] Expiry disposal can be partial and keeps expiry
+ [x] Expiry deactivation is admin only and branch specific
+ [x] Expiry rejects other branches invalid counts dates and unconfirmed requests
+ [x] Expiry rejects stale stock and rolls back failed log
+ [x] Expiry controller denies cashier deactivation even with forged post
+ [x] Expiry deactivation is rechecked during checkout
+ [x] Expiry controller saves valid removal and history survives trash
+ [x] Expiry long reasons fit existing log and inactive inventory cannot change
+ [x] Exchange commits linked records and repeated submit does not duplicate
+ [x] Exchange original minimum includes kept products and repeated exchange
+ [x] Exchange fixed discount uses remaining allowance including sibling replacements
+ [x] Exchange percentage cap is shared with unchanged items
+ [x] Exchange minimum and scope failures explain their different reasons
+ [x] Exchange original discount preselects but preserves explicit no discount
+ [x] Exchange cheaper replacement pays only difference and quarantine never restocks
+ [x] Exchange even swap has no cash movement
+ [x] Exchange keeps discounted return centavos and applies replacement discount
+ [x] Exchange rejects stale prices and rolls back all writes on failure
+ [x] Exchange rejects invalid quantities products and settlement
+ [x] Exchange rejects other branches inactive and expired inventory
+ [x] Exchange rechecks returns after lock and requires review token
+ [x] Exchange form excludes every original product including kept and previously returned items
+ [x] Exchange form explains when no different products are available
+ [x] Exchange review rejects original products even if not selected for return
+ [x] Exchange complete rechecks different product policy and leaves records unchanged
+ [x] Exchange controller reviews different product then commits and renders both receipts
+ [x] Account changes revoke an existing session
+ [x] Login page redirects authenticated users to their allowed home
+ [x] Login page renders for guests and revoked sessions
+ [x] Password role and branch changes revoke sessions
+ [x] Stale stock count is rejected and delivery adds to current stock
+ [x] Cashier adds and removes units with accurate logs and no duplicate submit
+ [x] Cashier stock rejects too many units stale counts and other branches
+ [x] Cashier stock requires reason and token and checks locked count
+ [x] Correction uses locked items and rejects competing revision
+ [x] Valid correction adjusts stock once
+ [x] Discounted quantity changes without recorded rule are rejected
+ [x] Promotion changes cannot alter historical discounts
+ [x] Discounted sale allows notes and payment corrections
+ [x] Discounted correction reprices original prices and collects exact additional payment
+ [x] Discounted correction pays back difference and preserves previously returned change
+ [x] Correction rechecks fixed discount minimum and percentage cap
+ [x] Correction allocates discount centavos and recalculates only eligible items
+ [x] Correction requires exact settlement and non cash reference without using original change
+ [x] Correction rejects stale discount and still preserves metadata only edits
+ [x] Correction can use retained expired discount and rolls back if audit cannot be saved
+ [x] Correction respects category eligibility and allocates exact centavos across lines
+ [x] Discounted corrections reject invalid stock and permissions without changing rows
+ [x] Correction refuses to rebill inconsistent tender but allows notes
+ [x] Checkout works without new columns and rounds before subtracting
+ [x] Refund conditions control stock and keep payout records
+ [x] Expired inventory cannot be restocked
+ [x] Discounts preserve exact centavos across many items
+ [x] Forecast ranks all candidates and snapshots are not display limited
+ [x] Forecast preview does not write saved records
+ [x] Forecast snapshots persist across branches and skip same day duplicates
+ [x] Manual forecast refreshes matching rows and keeps scheduled history
+ [x] Manual forecast aggregates branches and saves all products
+ [x] Manual forecast rolls back partial writes
+ [x] Manual forecast action saves then redirects and rejects bad filters
+ [x] Sales forecast snapshots match chart for every interval and refresh without duplicates
+ [x] Sales forecast save rolls back if product save fails
+ [x] Sales forecast target week handles iso year boundary
+ [x] Branch availability only shows sellable other branch stock and preserves cart
+ [x] Authentication failures and throttle are audited without secrets
+ [x] Authentication success inactive and logout have account audit context
+ [x] Saved forecast log returns latest records and product names
+ [x] Refund payout date and method are independent of original sale
+ [x] Legacy refund method remains unknown
+ [x] Non resellable full refund retains inventory cost
+ [x] Migration preserves existing rows and legacy return behavior
+ [x] Updated refund and report views render
+ [x] Refund slips separate events in the same second
+
+Csv Export
+ [x] Numeric formatting and formula protection
+ [x] Quotes commas unicode and multiline text round trip
+
+Discount Policy
+ [x] Centavo calculations match shared browser cases
+ [x] Imported item discounts also lock quantities
+ [x] Admin rejects sub cent and non decimal values
+ [x] Checkout rules reject invalid values
+
+Display Date
+ [x] Readable dates and periods
+ [x] Missing and invalid values never become today or the epoch
+ [x] Explicit instants use the application timezone
+
+Health
+ [x] Is defined app path
+ [x] Base url has been set
+
+Pagination View (Tests\Unit\PaginationView)
+ [x] Adjacent navigation does not skip the numbered window
+ [x] Boundaries disable unavailable controls and report partial last page
+ [x] Empty and single page do not offer dead navigation
+ [x] Filters and named pagination groups are preserved
+ [x] Configured templates work through the pager service
+ [x] Allowed filter lists remain effective
+
+Pdf Factory (Tests\Unit\PdfFactory)
+ [x] Bundled report fonts contain unicode mappings
+ [x] Pdf uses writable runtime and embeds unicode fonts
+
+Report Export
+ [x] Repeated request records once but another click records again
+ [x] Different format filters and user are not suppressed
+ [x] Legacy links have only a short duplicate guard
+ [x] Head and prefetch do not build or record exports
+ [x] Failed insert does not consume request
+

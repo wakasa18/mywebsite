@@ -1,0 +1,362 @@
+[
+  {
+    "variant": "full",
+    "width": 320,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 320,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 600,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 600,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "full",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 0
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 600,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 600,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "empty",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 3
+  },
+  {
+    "variant": "mixed",
+    "width": 320,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 320,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 600,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 600,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 768,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 768,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 1024,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 1024,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  },
+  {
+    "variant": "mixed",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "cardOverflow": false,
+    "smallButtons": false,
+    "fieldOverflow": false,
+    "emptyCharts": 1
+  }
+]

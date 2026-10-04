@@ -1,0 +1,478 @@
+[
+  {
+    "variant": "full",
+    "width": 320,
+    "height": 800,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 320,
+    "height": 800,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 320,
+    "height": 800,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 320,
+    "height": 800,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 320,
+    "height": 800,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 320,
+    "height": 800,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "height": 768,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "height": 768,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "height": 768,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "height": 768,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "height": 768,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 1024,
+    "height": 768,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 1180,
+    "height": 820,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 1180,
+    "height": 820,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 1440,
+    "height": 900,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 1440,
+    "height": 900,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "full",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "full",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "full",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "height": 800,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "height": 800,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "height": 800,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "height": 800,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "height": 800,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 320,
+    "height": 800,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 390,
+    "height": 844,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "height": 1024,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 768,
+    "height": 1024,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "height": 768,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "height": 768,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "height": 768,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "height": 768,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "height": 768,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 1024,
+    "height": 768,
+    "dark": true,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 1180,
+    "height": 820,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 1180,
+    "height": 820,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 1440,
+    "height": 900,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 1440,
+    "height": 900,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": false,
+    "panel": "payment"
+  },
+  {
+    "variant": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "panel": "products"
+  },
+  {
+    "variant": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "panel": "cart"
+  },
+  {
+    "variant": "empty",
+    "width": 844,
+    "height": 390,
+    "dark": true,
+    "panel": "payment"
+  }
+]

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Business Logic</h2>
+        <ul>
+            <li class="success">Trash and restore retain every deletable record and references</li>
+            <li class="success">Models reject permanent deletion and unscoped trash</li>
+            <li class="success">Flag only and legacy trash are excluded and paginate correctly</li>
+            <li class="success">Permanent delete endpoints require trash and administrator</li>
+            <li class="success">Restore controllers clear both deletion markers</li>
+            <li class="success">Permanent deletion hides records from trash but retains all references</li>
+            <li class="success">Permanent delete controllers retain used records and reject restoration</li>
+            <li class="success">Permanent deletion rolls back if audit cannot be written</li>
+            <li class="success">Permanent branch deletion retains stock and other branches</li>
+            <li class="success">Permanent branch deletion requires trash and does not guess branch</li>
+            <li class="success">Permanent branch deletion rolls back on audit failure</li>
+            <li class="success">Legacy permanent deletion requires explicit shared action</li>
+            <li class="success">Permanent delete migration is additive and repeatable</li>
+            <li class="success">Resetting permanent flag allows restore without erasing timestamp</li>
+            <li class="success">Branch flag reset returns only selected assignment to trash and pos</li>
+            <li class="success">Permanent flag alone hides rows when timestamps are missing</li>
+            <li class="success">Historical permanent dates do not hide recovered inventory</li>
+            <li class="success">Permanent flag migration backfills once and preserves recovery</li>
+            <li class="success">Soft delete migration backfills without losing flags or data</li>
+            <li class="success">Flag only branch trash is isolated and cannot be sold or changed</li>
+            <li class="success">Flag only trash is rechecked at checkout lock</li>
+            <li class="success">Branch trash and restore keep other branches and shared details</li>
+            <li class="success">Branch trash controller requires branch and administrator</li>
+            <li class="success">Branch trash rollback preserves inventory if audit fails</li>
+            <li class="success">Branch trash lists only selected branch and keeps legacy restore explicit</li>
+            <li class="success">Branch trash is excluded from pos expiry dashboard and replacement selection</li>
+            <li class="success">Branch trash is rechecked at checkout lock</li>
+            <li class="success">Branch trash migration can run twice without changing inventory</li>
+            <li class="success">Catalog assignment reuses master and keeps branches separate</li>
+            <li class="success">Catalog assignment accepts no sku and zero stock</li>
+            <li class="success">Catalog assignment rejects invalid input and unavailable records</li>
+            <li class="success">Catalog assignment rolls back when audit fails</li>
+            <li class="success">Catalog browse search and selection exclude assigned inactive and deleted products</li>
+            <li class="success">Expiry replacement preserves old expiry and records both movements once</li>
+            <li class="success">Expiry disposal can be partial and keeps expiry</li>
+            <li class="success">Expiry deactivation is admin only and branch specific</li>
+            <li class="success">Expiry rejects other branches invalid counts dates and unconfirmed requests</li>
+            <li class="success">Expiry rejects stale stock and rolls back failed log</li>
+            <li class="success">Expiry controller denies cashier deactivation even with forged post</li>
+            <li class="success">Expiry deactivation is rechecked during checkout</li>
+            <li class="success">Expiry controller saves valid removal and history survives trash</li>
+            <li class="success">Expiry long reasons fit existing log and inactive inventory cannot change</li>
+            <li class="success">Exchange commits linked records and repeated submit does not duplicate</li>
+            <li class="success">Exchange original minimum includes kept products and repeated exchange</li>
+            <li class="success">Exchange fixed discount uses remaining allowance including sibling replacements</li>
+            <li class="success">Exchange percentage cap is shared with unchanged items</li>
+            <li class="success">Exchange minimum and scope failures explain their different reasons</li>
+            <li class="success">Exchange original discount preselects but preserves explicit no discount</li>
+            <li class="success">Exchange cheaper replacement pays only difference and quarantine never restocks</li>
+            <li class="success">Exchange even swap has no cash movement</li>
+            <li class="success">Exchange keeps discounted return centavos and applies replacement discount</li>
+            <li class="success">Exchange rejects stale prices and rolls back all writes on failure</li>
+            <li class="success">Exchange rejects invalid quantities products and settlement</li>
+            <li class="success">Exchange rejects other branches inactive and expired inventory</li>
+            <li class="success">Exchange rechecks returns after lock and requires review token</li>
+            <li class="success">Exchange form excludes every original product including kept and previously returned items</li>
+            <li class="success">Exchange form explains when no different products are available</li>
+            <li class="success">Exchange review rejects original products even if not selected for return</li>
+            <li class="success">Exchange complete rechecks different product policy and leaves records unchanged</li>
+            <li class="success">Exchange controller reviews different product then commits and renders both receipts</li>
+            <li class="success">Account changes revoke an existing session</li>
+            <li class="success">Login page redirects authenticated users to their allowed home</li>
+            <li class="success">Login page renders for guests and revoked sessions</li>
+            <li class="success">Password role and branch changes revoke sessions</li>
+            <li class="success">Stale stock count is rejected and delivery adds to current stock</li>
+            <li class="success">Cashier adds and removes units with accurate logs and no duplicate submit</li>
+            <li class="success">Cashier stock rejects too many units stale counts and other branches</li>
+            <li class="success">Cashier stock requires reason and token and checks locked count</li>
+            <li class="success">Correction uses locked items and rejects competing revision</li>
+            <li class="success">Valid correction adjusts stock once</li>
+            <li class="success">Discounted quantity changes without recorded rule are rejected</li>
+            <li class="success">Promotion changes cannot alter historical discounts</li>
+            <li class="success">Discounted sale allows notes and payment corrections</li>
+            <li class="success">Discounted correction reprices original prices and collects exact additional payment</li>
+            <li class="success">Discounted correction pays back difference and preserves previously returned change</li>
+            <li class="success">Correction rechecks fixed discount minimum and percentage cap</li>
+            <li class="success">Correction allocates discount centavos and recalculates only eligible items</li>
+            <li class="success">Correction requires exact settlement and non cash reference without using original change</li>
+            <li class="success">Correction rejects stale discount and still preserves metadata only edits</li>
+            <li class="success">Correction can use retained expired discount and rolls back if audit cannot be saved</li>
+            <li class="success">Correction respects category eligibility and allocates exact centavos across lines</li>
+            <li class="success">Discounted corrections reject invalid stock and permissions without changing rows</li>
+            <li class="success">Correction refuses to rebill inconsistent tender but allows notes</li>
+            <li class="success">Checkout works without new columns and rounds before subtracting</li>
+            <li class="success">Refund conditions control stock and keep payout records</li>
+            <li class="success">Expired inventory cannot be restocked</li>
+            <li class="success">Discounts preserve exact centavos across many items</li>
+            <li class="success">Forecast ranks all candidates and snapshots are not display limited</li>
+            <li class="success">Forecast preview does not write saved records</li>
+            <li class="success">Forecast snapshots persist across branches and skip same day duplicates</li>
+            <li class="success">Manual forecast refreshes matching rows and keeps scheduled history</li>
+            <li class="success">Manual forecast aggregates branches and saves all products</li>
+            <li class="success">Manual forecast rolls back partial writes</li>
+            <li class="success">Manual forecast action saves then redirects and rejects bad filters</li>
+            <li class="success">Sales forecast snapshots match chart for every interval and refresh without duplicates</li>
+            <li class="success">Sales forecast save rolls back if product save fails</li>
+            <li class="success">Sales forecast target week handles iso year boundary</li>
+            <li class="success">Branch availability only shows sellable other branch stock and preserves cart</li>
+            <li class="success">Authentication failures and throttle are audited without secrets</li>
+            <li class="success">Authentication success inactive and logout have account audit context</li>
+            <li class="success">Saved forecast log returns latest records and product names</li>
+            <li class="success">Refund payout date and method are independent of original sale</li>
+            <li class="success">Legacy refund method remains unknown</li>
+            <li class="success">Non resellable full refund retains inventory cost</li>
+            <li class="success">Migration preserves existing rows and legacy return behavior</li>
+            <li class="success">Updated refund and report views render</li>
+            <li class="success">Refund slips separate events in the same second</li>
+        </ul>
+        <h2>Csv Export</h2>
+        <ul>
+            <li class="success">Numeric formatting and formula protection</li>
+            <li class="success">Quotes commas unicode and multiline text round trip</li>
+        </ul>
+        <h2>Discount Policy</h2>
+        <ul>
+            <li class="success">Centavo calculations match shared browser cases</li>
+            <li class="success">Imported item discounts also lock quantities</li>
+            <li class="success">Admin rejects sub cent and non decimal values</li>
+            <li class="success">Checkout rules reject invalid values</li>
+        </ul>
+        <h2>Display Date</h2>
+        <ul>
+            <li class="success">Readable dates and periods</li>
+            <li class="success">Missing and invalid values never become today or the epoch</li>
+            <li class="success">Explicit instants use the application timezone</li>
+        </ul>
+        <h2>Health</h2>
+        <ul>
+            <li class="success">Is defined app path</li>
+            <li class="success">Base url has been set</li>
+        </ul>
+        <h2>Pagination View (Tests\Unit\PaginationView)</h2>
+        <ul>
+            <li class="success">Adjacent navigation does not skip the numbered window</li>
+            <li class="success">Boundaries disable unavailable controls and report partial last page</li>
+            <li class="success">Empty and single page do not offer dead navigation</li>
+            <li class="success">Filters and named pagination groups are preserved</li>
+            <li class="success">Configured templates work through the pager service</li>
+            <li class="success">Allowed filter lists remain effective</li>
+        </ul>
+        <h2>Pdf Factory (Tests\Unit\PdfFactory)</h2>
+        <ul>
+            <li class="success">Bundled report fonts contain unicode mappings</li>
+            <li class="success">Pdf uses writable runtime and embeds unicode fonts</li>
+        </ul>
+        <h2>Report Export</h2>
+        <ul>
+            <li class="success">Repeated request records once but another click records again</li>
+            <li class="success">Different format filters and user are not suppressed</li>
+            <li class="success">Legacy links have only a short duplicate guard</li>
+            <li class="success">Head and prefetch do not build or record exports</li>
+            <li class="success">Failed insert does not consume request</li>
+        </ul>
+    </body>
+</html>

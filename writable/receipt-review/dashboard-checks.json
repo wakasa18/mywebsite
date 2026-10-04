@@ -1,0 +1,152 @@
+[
+  {
+    "state": "full",
+    "width": 320,
+    "dark": false
+  },
+  {
+    "state": "full",
+    "width": 320,
+    "dark": true
+  },
+  {
+    "state": "full",
+    "width": 390,
+    "dark": false
+  },
+  {
+    "state": "full",
+    "width": 390,
+    "dark": true
+  },
+  {
+    "state": "full",
+    "width": 768,
+    "dark": false
+  },
+  {
+    "state": "full",
+    "width": 768,
+    "dark": true
+  },
+  {
+    "state": "full",
+    "width": 1024,
+    "dark": false
+  },
+  {
+    "state": "full",
+    "width": 1024,
+    "dark": true
+  },
+  {
+    "state": "full",
+    "width": 1440,
+    "dark": false
+  },
+  {
+    "state": "full",
+    "width": 1440,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 320,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 320,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 390,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 390,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 768,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 768,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 1024,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 1024,
+    "dark": true
+  },
+  {
+    "state": "empty",
+    "width": 1440,
+    "dark": false
+  },
+  {
+    "state": "empty",
+    "width": 1440,
+    "dark": true
+  },
+  {
+    "state": "offline",
+    "width": 320,
+    "dark": false
+  },
+  {
+    "state": "offline",
+    "width": 320,
+    "dark": true
+  },
+  {
+    "state": "offline",
+    "width": 390,
+    "dark": false
+  },
+  {
+    "state": "offline",
+    "width": 390,
+    "dark": true
+  },
+  {
+    "state": "offline",
+    "width": 768,
+    "dark": false
+  },
+  {
+    "state": "offline",
+    "width": 768,
+    "dark": true
+  },
+  {
+    "state": "offline",
+    "width": 1024,
+    "dark": false
+  },
+  {
+    "state": "offline",
+    "width": 1024,
+    "dark": true
+  },
+  {
+    "state": "offline",
+    "width": 1440,
+    "dark": false
+  },
+  {
+    "state": "offline",
+    "width": 1440,
+    "dark": true
+  }
+]

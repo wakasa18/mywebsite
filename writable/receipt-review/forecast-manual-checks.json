@@ -1,0 +1,26 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "automaticForecastSubmits": 0,
+    "manualForecastSubmits": 1
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "automaticForecastSubmits": 0,
+    "manualForecastSubmits": 1
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "automaticForecastSubmits": 0,
+    "manualForecastSubmits": 1
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "automaticForecastSubmits": 0,
+    "manualForecastSubmits": 1
+  }
+]

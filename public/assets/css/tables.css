@@ -1,0 +1,68 @@
+/* Shared workspace tables; standalone receipts and PDF exports keep their layout. */
+.content .table-wrap {
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-2) var(--surface-2);
+}
+.content .table-wrap:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+.content .table-wrap > table { width: 100%; font-variant-numeric: tabular-nums; }
+.content .table-wrap > table > thead > tr > th {
+    padding: 14px 16px;
+    background: var(--surface-2);
+    color: var(--text-2);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: .1px;
+    white-space: normal;
+    border-bottom: 1px solid var(--line-2);
+}
+.content .table-wrap > table > tbody > tr > td {
+    padding: 15px 16px;
+    line-height: 1.6;
+    border-bottom-color: var(--line);
+}
+.content .table-wrap > table > tbody > tr:nth-child(even) {
+    background: color-mix(in srgb, var(--surface-2) 50%, var(--surface));
+}
+.content .table-wrap > table > tbody > tr:focus-within { background: var(--primary-lighter); }
+@media (hover: hover) {
+    .content .table-wrap > table > tbody > tr:hover { background: var(--primary-lighter); }
+}
+.content .table-wrap > table .table-number { text-align: right; font-variant-numeric: tabular-nums; }
+.content .table-wrap > table td.table-number { white-space: nowrap; }
+.content .table-wrap > table td[colspan] { padding: 30px 20px; }
+.content .table-wrap > table td.record-title { color: var(--text); }
+.content .table-scroll-hint { margin: 0; padding: 10px 16px; line-height: 1.5; }
+html.high-contrast .content .table-wrap > table > thead > tr > th { border-bottom-width: 2px; }
+@media (max-width: 700px) {
+    .content .table-wrap > .mobile-record-ready > tbody { padding: 12px; }
+    .content .table-wrap > .mobile-record-ready > tbody > tr {
+        background: var(--surface);
+        gap: 14px 16px;
+        padding: 16px;
+        border-color: var(--line-2);
+        box-shadow: 0 2px 6px rgb(0 0 0 / .025);
+    }
+    .content .table-wrap > .mobile-record-ready > tbody > tr > td {
+        padding: 0;
+        white-space: normal;
+        text-align: left;
+    }
+    .content .table-wrap > .mobile-record-ready td::before { font-size: 11px; line-height: 1.5; }
+    .content .table-wrap > .mobile-record-ready td.record-title {
+        padding-bottom: 12px;
+        font-size: 15px;
+    }
+    .content .table-wrap > .mobile-record-ready td.record-actions {
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+    }
+    .content .table-wrap > .mobile-record-ready td.record-wide { grid-column: 1 / -1; }
+    .content .table-wrap > .mobile-record-ready td.record-empty { padding: 12px 0; }
+}
+@media print {
+    .content .table-wrap { max-height: none !important; overflow: visible !important; }
+    .content .table-scroll-hint { display: none; }
+}

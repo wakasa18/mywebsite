@@ -1,0 +1,11 @@
+[
+  {"subtotal":1.01,"rule":{"type":"percentage","value":50,"minimum":0,"maximum":null},"expected":0.51},
+  {"subtotal":59.699999999999996,"rule":{"type":"percentage","value":10,"minimum":59.70,"maximum":null},"expected":5.97},
+  {"subtotal":59.69,"rule":{"type":"percentage","value":10,"minimum":59.70,"maximum":null},"expected":0},
+  {"subtotal":400,"rule":{"type":"fixed","value":20,"minimum":0,"maximum":null},"expected":20},
+  {"subtotal":400,"rule":{"type":"percentage","value":20,"minimum":0,"maximum":30},"expected":30},
+  {"subtotal":15,"rule":{"type":"fixed","value":20,"minimum":0,"maximum":null},"expected":15},
+  {"subtotal":0,"rule":{"type":"fixed","value":20,"minimum":0,"maximum":null},"expected":0},
+  {"subtotal":100.05,"rule":{"type":"percentage","value":10,"minimum":0,"maximum":null},"expected":10.01},
+  {"subtotal":12.34,"rule":{"type":"percentage","value":100,"minimum":0,"maximum":null},"expected":12.34}
+]

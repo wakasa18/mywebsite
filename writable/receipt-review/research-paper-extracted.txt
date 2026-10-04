@@ -1,0 +1,807 @@
+[0001] Development of an Online Point of Sale and Inventory System for Pharxmaco Pharmacy with Sales Forecasting
+[0002] A Capstone Presented to the Faculty of the College of
+[0003] Computer Studies and Information Technology
+[0004] Immaculate Conception I-College of
+[0005] Arts and Technology
+[0006] Sta. Maria, Bulacan
+[0007] In Partial Fulfillment of the Requirements for the Degree of
+[0008] Bachelor of Science in Information Systems
+[0009] Fernandez, Arvin Brian C.
+[0010] Villanueva, Sean Warren M.
+[0011] June 2026
+[0012] Chapter 1: The Problem and Its Background
+[0013] Introduction
+[0014] In recent years, the increasing demand for health services has placed significant pressure on pharmacies to efficiently manage sales, maintain accurate inventory records, and anticipate customer needs. To address these challenges, many pharmacies have adopted integrated online point of sale and inventory management systems with sales forecasting capabilities to enable real-time sales recording, automatic inventory updates, and data-driven decision-making. Studies comparing forecasting methods such as naive, moving average, exponential smoothing, and Holt-Winters have shown that analyzing historical sales data improves prediction accuracy and helps minimize supply imbalances (Burinskiene, 2022).
+[0015] Analyzing past sales trends allows pharmacies to maintain appropriate stock levels, reduce shortages, and avoid excess inventory. This is why effective inventory management plays an important role in helping small and medium-sized retail businesses maintain correct stock levels and avoid stockouts (Wilson, 2022). In the Philippines, small community pharmacies increasingly recognize the importance of effective inventory management systems in ensuring product availability and improving customer satisfaction (Soliveres et al., 2024).
+[0016] Despite these developments, many small community pharmacies still rely on manual inventory processes, which can lead to inefficiencies and inaccuracies in procurement planning. Manual recording and estimation often result in overstocking or medicine shortages, both of which negatively affect operational efficiency (Yulianti et al., 2025). Although pharmacies commonly use traditional inventory practices such as Economic Order Quantity, First Expired, First Out, and other stock control methods, these are often done manually, making accurate stock tracking and demand prediction difficult (Soliveres et al., 2024).
+[0017] Despite the growing number of studies on pharmacy information systems, there remains a lack of research that integrates point-of-sale processing, real-time inventory updating, and sales forecasting into a single system tailored for small pharmacies. Most related studies focus on either digital inventory monitoring or predictive analytics separately; however, fewer studies explain how these functions can work together to support accurate stock control, faster transaction recording, and proactive demand planning. This gap is especially evident in small community pharmacies that continue to rely on manual processes, making it difficult to maintain accurate records and anticipate future demand.
+[0018] To address these concerns, integrating automated POS and inventory systems with forecasting features can improve inventory accuracy, minimize waste, prevent shortages, and support better decision-making (Divina et al., 2025). Therefore, this study aims to develop an integrated online point of sale and inventory system with sales forecasting for Pharxmaco Drugstore. By combining real-time transaction recording with predictive analytics, the proposed system seeks to improve operational performance, strengthen inventory stability, and support the digital transformation goals of Sustainable Development Goal 9.
+[0019] This study also aligns with Sustainable Development Goal 9: Industry, Innovation, and Infrastructure, particularly Target 9.5, which promotes technological innovation and digital adoption among small and medium-sized enterprises. By introducing an integrated online point of sale and inventory system with forecasting capabilities, the study supports digital transformation in small-scale healthcare operations. This implementation can improve operational efficiency, reduce inventory wastage, and help ensure the continuous availability of essential medicines.
+[0020] The general problem of this study is the continued use of manual sales and inventory processes at Pharxmaco Drugstore, which leads to inaccurate stock records and difficulty in anticipating customer demand. To address this, the study aims to develop a system that automates sales, improves real-time inventory accuracy, and incorporates sales forecasting to enhance operational efficiency.
+[0021] Review of Related Literature and Studies 
+[0022] Digital transformation in business operations refers to the shift from manual processes to computerized and automated systems that improve efficiency and accuracy. In retail and pharmaceutical settings, this transformation allows businesses to record transactions in real time, monitor inventory more effectively, and reduce errors caused by manual handling. This shift is aligned with Sustainable Development Goal (SDG) 9: Industry, Innovation, and Infrastructure, which emphasizes the use of technology and innovation to strengthen business operations and infrastructure. Studies show that digital point of sale and inventory systems enhance transaction speed, improve inventory accuracy, and support better decision making (Burinskiene, 2022).
+[0023] In addition, the integration of forecasting techniques in inventory systems has been identified as an effective approach in managing product demand and minimizing stock-related issues. Forecasting methods such as exponential smoothing utilize historical sales data to predict future demand and support better inventory planning (Sihotang, 2023). In the Philippine context, several studies reveal that small scale pharmacies still rely on manual inventory practices, which often lead to inefficiencies and inaccurate stock monitoring (Soliveres et al., 2024).
+[0024] Point Of Sales
+[0025] Digital transformation in business operations refers to the shift from manual processes to computerized and automated systems that improve efficiency and accuracy. In retail and pharmaceutical settings, this transformation allows businesses to record transactions in real time, monitor inventory more effectively, and reduce errors caused by manual handling. Studies show that digital point of sale and inventory systems enhance transaction speed, improve inventory accuracy, and support better decision-making (Burinskiene, 2022).
+[0026] Furthermore, digital transformation in retail enhances inventory stability and minimizes stock shortages (Rushton et al., 2023). Data-driven systems also support small and medium enterprises by improving inventory tracking and coordination (Wilson, 2022). Additionally, integrating inventory management with data analytics helps prevent stockouts and overstocking (Lalou et al., 2020).
+[0027] Developed an online pharmacy sales and inventory management system that improves transaction processing, enables real-time inventory monitoring, and generates accurate sales reports. The study concluded that computerized pharmacy systems significantly improve operational efficiency compared to manual recording practices Garcia et al. (2024).
+[0028] Sales Forecasting 
+[0029] The integration of forecasting techniques in inventory systems has been identified as an effective approach in managing product demand and minimizing stock-related issues. Forecasting methods such as exponential smoothing utilize historical sales data to predict future demand and support better inventory planning (Sihotang, 2023). In pharmaceutical contexts, these forecasting techniques have proven highly effective in predicting medication demand and optimizing supply chain performance.
+[0030] Sales forecasting serves as a fundamental component in predicting future demand and maintaining an optimal inventory balance. While traditional manual forecasting methods remain in common use, evidence suggests that statistical approaches provide significantly higher prediction of accuracy.
+[0031] Among the most common methodologies is Simple Exponential Smoothing, which is effective for data that fluctuates around a roughly constant level and gives greater weight to recent observations than to earlier sales data (Abdelati & Abdelwali, 2024). However, Simple Exponential Smoothing often fails to respond to clear upward or downward trends, as it models only the level of the data.
+[0032] To address this limitation, Holt’s Linear Exponential Smoothing extends the basic model by adding a second equation that explicitly tracks the trend, allowing for more accurate forecasting in scenarios where demand is increasing or decreasing over time. Recent research demonstrates that selecting the appropriate model is critical; while Holt’s method is generally recommended for trending data, Simple Exponential Smoothing can perform better if the trend is weak, as it avoids forcing a linear trend on volatile sales data (Kumar et al., 2024).
+[0033] Furthermore, the integration of hybrid and statistical forecasting methods further enhances prediction accuracy, supporting more informed inventory decisions. Integrating these decision support systems with data mining techniques has also emerged as a robust approach for developing predictive systems that reduce waste and improve stock planning in pharmaceutical supply chains.
+[0034] Inventory Management
+[0035] A study on small scale pharmacies in Cavite revealed that manual storage methods and stock counting remain common practices (Soliveres et al., 2024). These manual systems often lead to stock inaccuracies and operational inefficiencies. Similarly, studies on pharmacy inventory systems have shown that automated inventory management helps improve stock monitoring, maintain accurate records, and enhance operational efficiency (Soliveres et al., 2024). Research conducted in Ilocos Norte further confirmed that proper inventory control is directly related to improved healthcare service delivery (Parilla et al., 2022). Local studies also support the integration of forecasting in small businesses. A web-based POS and inventory system with sales forecasting demonstrated that integrating predictive analytics minimizes waste and improves planning (Divina et al., 2025).
+[0036] Moreover, forecasting and operations research techniques have been recommended to improve pharmacy management efficiency in the Philippines (Teleron, 2023). The reviewed foreign and local literature demonstrates that digital transformation and predictive analytics significantly improve sales forecasting accuracy, reduce stock outs, and minimize inventory waste. Foreign studies emphasize advanced forecasting models and automated systems, while local research highlights ongoing manual inefficiencies in Philippine pharmacies.
+[0037] However, there remains a lack of integrated systems specifically developed for small community pharmacies that combine POS automation with forecasting capabilities. The present study addresses this gap by developing an Online Point of Sale and Inventory system with sales forecasting for Pharxmaco Drugstore. By integrating real-time transaction recording with predictive analytics, the proposed system aims to enhance operational efficiency, improve inventory stability, and strengthen service delivery in the local pharmaceutical retail setting.
+[0038] Significance of the Study
+[0039] The development of the Online Point of Sale (POS) and Inventory System with Sales Forecasting will provide significant advantages to various stakeholders by transforming Pharxmaco Drugstore from manual reliance to data driven operations.
+[0040] Admin/Owner - This study will provide a centralized and streamlined method for monitoring business performance. The integrated system will allow management to address inefficiencies caused by manual processes, helping them minimize financial waste, and improve the procurement of medicine. By adopting this online infrastructure, owners will be able to access sales reports and inventory status remotely, allowing them to make informed business decisions based on accurate, real-time data.
+[0041] Staff - The staff members responsible for inventory management will benefit from the transition away from manual, paper-based stock counting. This digital shift will significantly alleviate the burden of physical record keeping, allowing for more precise tracking of stock levels and expiration dates. Furthermore, the system ensures that staff can easily retrieve accurate data, reducing the likelihood of human error during manual inventory audits.
+[0042] Cashiers - As the primary operator of the POS interface, cashiers will experience a more efficient transaction process. The automated system will streamline daily sales recording, enabling faster customer checkout times. By reducing the reliance on manual computation and handwritten receipts, the system ensures that cash and transaction records remain consistently balanced and organized throughout their shifts.
+[0043] Customers - While they will not directly operate the software, customers will benefit from a more reliable supply of essential medications and a faster service experience. Because the online system will use forecasting to plan drug supplies more accurately, patients will experience a significantly lower risk of stockouts. This ensures that the medicine they need is available when they need it, leading to a more reliable healthcare experience.
+[0044] Proponents - The study will enhance the proponents’ knowledge and technical competencies in system development, database management, and predictive analytics. By designing and implementing an Online POS and Inventory system with Sales Forecasting, the proponents will gain practical experience in applying theoretical concepts to a real-world business environment. The research process will also strengthen their analytical thinking, problem solving abilities, and programming skills, contributing to their professional growth in the field of information technology.
+[0045] Future Researchers - This study will serve as a practical reference and technical foundation for further innovations in small scale pharmacy automation. It will provide a baseline for other students who wish to explore how online analytics and sales forecasting can be applied to local retail environments to solve real-world business problems. The results of this study will also offer insights into the challenges and successes of implementing web-based systems for small to medium enterprises (SMEs).
+[0046] Theoretical Framework
+[0047] This study is anchored on the ISO/IEC 25010 standard, which provides a comprehensive global framework for evaluating the quality of software systems. The model defines eight key product quality characteristics: functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, and portability. These characteristics serve as standardized criteria in determining how well a system meets specified requirements and performs under actual operating conditions.
+[0048] The use of ISO/IEC 25010 is particularly appropriate for this study because the system is intended for operational use in a pharmacy setting, where accuracy, efficiency, and data security are paramount. The model enables the researchers to systematically determine whether the system meets user requirements, performs efficiently during transactions, protects sensitive data, and remains stable during daily operations. This structured evaluation allows the researchers to identify strengths and areas for improvement in the system's design.
+[0049] Furthermore, ISO/IEC 25010 supports the objective of developing a high quality, user-centered system by aligning the evaluation process with established software engineering benchmarks. Utilizing this model enhances the credibility and reliability of the study, as it ensures the system is assessed based on recognized international standards. Consequently, the adoption of ISO/IEC 25010 ensures that the developed system for Pharxmaco Drugstore is not only functional but also meets the quality expectations necessary for effective, sustainable, and secure pharmaceutical retail operations.
+[0050] Conceptual Framework
+[0051] Figure 1. Input Process Output
+[0052] This figure illustrates the Input-Process-Output (IPO) model of the study. The input includes the data and requirements needed to support the system’s operations, such as user information for authentication and role-based access control, product and inventory details for stock monitoring, sales transaction data for daily processing, discount information for promotional applications, historical sales data for forecasting, and the system requirements and user needs gathered during the initial phase of the study.
+[0053] The process begins with data gathering and requirements analysis to identify the needs of the pharmacy and its users. This is followed by system design and development, where the structure and features of the system are created. The system then processes sales transactions through the point-of-sale module, updates and monitors inventory after each transaction, and applies discounts based on defined conditions. It also records sales and stock logs for monitoring, generates sales and inventory reports, performs sales forecasting using historical data, and undergoes testing and evaluation using ISO/IEC 25010 to ensure functionality, performance, and usability.
+[0054] The output of the study is a fully functional online point of sale and inventory system for Pharxmaco Drugstore with sales forecasting. The system is expected to provide automated sales recording, real-time inventory monitoring, and predictive sales analysis, which can improve operational efficiency, optimize stock planning, reduce human error, and support data-driven decision-making.
+[0055] Statement of the Problem
+[0056] General Problem
+[0057] Pharxmaco Drugstore currently relies on manual sales recording and inventory monitoring, which causes inaccuracies, delays, and inefficient procurement. The lack of an integrated digital platform also limits real-time stock tracking and sales forecasting. This study aims to develop an integrated Online Point of Sale and Inventory System with Sales Forecasting to automate transactions, improve inventory accuracy, and support data-driven decision-making for better operational efficiency.
+[0058] Specific Problems
+[0059] These are the specific problems we observe.
+[0060] How can the proposed system be designed to efficiently manage sales and inventory records of Pharxmaco?
+[0061] How reliable is the proposed Online Point of Sale and Inventory System with Sales Forecasting in generating accurate and comprehensive business reports?
+[0062] How can the proposed system implement user access control to ensure that only authorized users can access and manage system functions?
+[0063] How can the proposed Online Point of Sale and Inventory System with Sales Forecasting contribute to Sustainable Development Goal 9, particularly Target 9.5, by promoting technological innovation and digital adoption among small and medium sized enterprises (SMEs)?
+[0064] How can the proposed system be evaluated using the ISO/IEC 25010 Software Quality Model in terms of functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, and portability?
+[0065] Scope and Delimitation
+[0066] Scope of the Study
+[0067] This study focuses on developing an integrated Online Point of Sale and Inventory System with Sales Forecasting for Pharxmaco Drugstore. The proposed system consolidates transaction processing, inventory control, predictive analytics, and multi-branch stock visibility into a unified online platform to help streamline pharmacy operations and support better decision-making.
+[0068] The Point-of-Sale module handles sales transactions through real-time product selection, automatic computation of totals, discount application, payment processing, and digital receipt generation. It is designed to ensure accurate transaction recording, minimize human errors, and enhance overall efficiency during daily business activities.
+[0069] The Inventory Management module monitors product details, stock levels, expiration dates, and stock movements in real time, with records updated automatically after each transaction. Additionally, the system provides automated low-stock and expiration alerts to help prevent shortages and minimize product wastage, which improves inventory control accuracy.
+[0070] The system also supports multi-branch inventory visibility, allowing authorized users to view product availability across different branches. If a product is unavailable in one branch, the system can indicate whether the item is available in another branch, enabling staff to recommend the nearest branch where the customer may obtain the product. This feature improves customer service and supports better coordination among branches.
+[0071] The Sales Forecasting module uses sample data obtained from Kaggle to test and verify the forecasting function of the system. The forecasting module applies statistical methods, specifically Holt’s Exponential Smoothing, to evaluate whether the forecasting logic produces reasonable results and functions correctly.
+[0072] Delimitations of the Study
+[0073] The study is limited to the functions included in the proposed system and does not cover connecting with external suppliers. It does not use actual historical sales records from Pharxmaco Drugstore for forecasting. Instead, Kaggle sample data are used only to test and verify the forecasting feature.
+[0074] The forecasting module does not consider external market variables such as competitor pricing, regional health trends, or macroeconomic changes. The system also does not incorporate advanced artificial intelligence or complex machine learning models. Furthermore, the forecasting feature is restricted to a 24-month data window, which limits the depth of long-term prediction analysis.
+[0075] Definition of Terms 
+[0076] For clarity and consistent understanding of this study, the following terms are defined based on their application within the system:
+[0077] Compatibility - The ability of the system to operate correctly across supported web browsers and computer setups used in Pharxmaco Drugstore.
+[0078] Exponential Smoothing - A forecasting technique that uses weighted averages of past sales data, giving more importance to recent observations to predict future product sales.
+[0079] Functional Suitability - The degree to which the system provides features that meet the required functions for managing sales, inventory, and sales forecasting at Pharxmaco Drugstore.
+[0080] Holt’s Linear Exponential Smoothing - A statistical forecasting technique that extends simple smoothing by accounting for both the current level of demand and its growth trend over time, allowing more accurate predictions when data shows a trend.
+[0081] Inventory Management - The process of monitoring and controlling stock levels, product information, and expiration dates to ensure accurate record-keeping and availability of medicines.
+[0082] Maintainability - The capability of the system to be modified, corrected, or enhanced efficiently after deployment to address issues or improve performance.
+[0083] Operational Efficiency - The improvement in transaction speed, accuracy, and overall workflow achieved through system automation.
+[0084] Performance Efficiency - The capability of the system to process sales transactions, update inventory, and generate reports promptly with minimal delay.
+[0085] Portability - The ability of the system to be installed and operated in different computer setups or environments within the pharmacy without significant modification.
+[0086] Real-Time Processing - The immediate updating of sales and inventory information after each completed transaction.
+[0087] Reliability - The ability of the system to perform its intended functions consistently and accurately without errors or system failures.
+[0088] Sales Forecasting - The analysis of historical sales data to predict future product demand and support effective inventory planning.
+[0089] Security - The protection of sales, inventory, and customer data through authentication, access control, and data confidentiality measures.
+[0090] Usability - The degree to which authorized pharmacy personnel can easily learn, navigate, and operate the system for daily sales and inventory management.
+[0091] Chapter 2: Methodology of the Study
+[0092] Methods and Techniques Used
+[0093] The development of the proposed system requires appropriate research methods and techniques to ensure that the objectives of the study are properly achieved. These methods guide the researchers in planning, designing, developing, and evaluating the system. The proposed Online Point of Sale (POS) and Inventory System with Sales Forecasting for Pharxmaco Drugstore was developed using a combination of research techniques and software development approaches to ensure that it effectively addresses the operational needs of the pharmacy.
+[0094] To analyze the existing processes and develop a more efficient system, the researchers will use a suitable research design and software development approach. Interviews and observations will be conducted to gather accurate and relevant data from actual pharmacy operations. System analysis and design techniques will also be applied to define system requirements and organize system processes, ensuring functionality and ease of use. For the sales forecasting component, the study will employ Holt’s Exponential Smoothing to generate forecasts and will use Mean Absolute Percentage Error (MAPE) and related error measures to assess forecasting accuracy and reliability. Furthermore, the system will be evaluated using ISO/IEC 25010 to ensure that it meets established standards in terms of performance, usability, and security. The specific software development model, forecasting techniques, and research approaches employed in the system development are discussed in the succeeding sections.
+[0095] Research Design
+[0096] This study will employ a developmental research design to address the operational challenges currently faced by Pharxmaco Drugstore. This approach is appropriate because the main objective of the study is to create and implement a functional, custom-built software solution: an integrated Online Point of Sale, Inventory, and Sales Forecasting System. The development process will involve systematic stages of design, construction, and testing to ensure that the system is tailored to the specific workflows and needs of the pharmacy. Through this method, the study will directly address the gaps in the existing manual or semi-automated processes related to sales transactions, stock management, and predictive planning.
+[0097] To ensure that the system is effective and reliable, the study will also use a quantitative research approach for system evaluation. After the development phase is completed, the system will be tested by intended users such as staff and management through structured survey questionnaires using a Likert scale. This quantitative method will allow the researchers to collect measurable data and provide an objective assessment of the system’s performance. The system will be evaluated based on the ISO/IEC 25010 standard, which will help determine its usability, functional suitability, performance, and security. By combining developmental design with quantitative evaluation, the study will confirm that the final system is not only functional in practice but also supported by evidence-based results showing its quality and effectiveness.
+[0098] Software Development Model
+[0099] Figure 2. Agile Software Development Model
+[0100] This figure  illustrates the Agile Software Development Model that will be used in the development of the proposed Online Point of Sale (POS) and Inventory System with Sales Forecasting for Pharxmaco Drugstore. Agile is an iterative development approach that will allow researchers to continuously improve the system through repeated development cycles. Each phase of the process will play an important role in ensuring that the system is properly planned, developed, tested, and refined.
+[0101] The Agile model will serve as the framework for the Pharxmaco system because it enables a continuous, feedback-driven development cycle. Unlike linear models, Agile will allow the researchers to treat the system not as a single, finished product, but as an evolving solution that will be refined through repeated cycles of design, development, testing, and review. This iterative approach will ensure that each feature ranging from basic POS transactions to complex sales forecasting is built, verified, and improved based on actual pharmacy needs.
+[0102] The process will function through the following integrated phases, where each iteration links these stages to ensure constant system advancement:
+[0103] Planning Phase: The researchers will identify the scope, objectives, and overall coverage of the system, gathering requirements based on the problems identified in the current manual sales and inventory processes of the pharmacy.
+[0104] Design Phase: The researchers will create system designs, including flowcharts, data flow diagrams, database structures, and user interface layouts, which will define how the system will function and how different components will interact.
+[0105] Development Phase: The researchers will build the system using appropriate programming tools and technologies to implement core features, such as sales transaction processing, inventory management, discount handling, reporting, and sales forecasting. By focusing on one module at a time, the team will ensure that core functionalities are stable before adding more advanced capabilities.
+[0106] Testing Phase: The system will be evaluated to identify errors, bugs, and performance issues. Once a specific feature is built, it will undergo immediate functional testing to create a feedback loop where results will directly inform the refinements made in the subsequent iteration.
+[0107] Review Phase: The system will be assessed based on user feedback and the ISO/IEC 25010 standard. During this stage, the performance of the newly implemented features will be assessed, allowing researchers to capture user feedback early and identify necessary adjustments to improve usability or transaction speed before the next development cycle begins.
+[0108] Agile has been successfully applied in similar studies involving web-based and online systems development. For example implemented an Agile-based web Point of Sale and Inventory System, allowing iterative refinement based on user feedback, which improved operational efficiency and inventory accuracy (Divina et al., 2025). Similarly, Agile strategies used to develop an online pharmacy sales and inventory system, adapting features according to actual pharmacy workflows and user requirements (Garcia et al. 2024). These studies demonstrate that Agile is effective in developing responsive, user-centered systems in small-scale retail and healthcare environments, making it a suitable model for the present study.
+[0109] Locale of the Study
+[0110] The study will be conducted at Pharxmaco Drugstore, located in Sitio Centro, San Jose Patag, Santa Maria, Bulacan, Philippines. Santa Maria is a municipality in Bulacan and is part of Region III (Central Luzon). The area features a mix of residential and commercial establishments, serving diverse clientele, which highlights the importance of efficient pharmacy services.
+[0111] Pharxmaco Drugstore provides various pharmaceutical products and healthcare services to the local community, handling daily sales transactions, inventory management, and customer purchases. Before the implementation of the proposed system, many of these processes were performed manually, resulting in significant operational challenges such as delayed transaction processing, stock inaccuracies, and difficulty in forecasting future product demand.
+[0112] The study will focus on the development of an Online Point of Sale and Inventory System with Sales Forecasting specifically tailored to the operational requirements of Pharxmaco Drugstore. By implementing the system within this locale, the researchers will aim to streamline sales operations, ensure accurate inventory monitoring, and provide predictive insights for stock management. Ultimately, this intervention will be designed to enhance operational efficiency and service quality for both the pharmacy staff and its customers.
+[0113] Respondents of the Study 
+[0114] The respondents of the study will consist of fifteen (15) participants, composed of five (5) end users and ten (10) IT expert respondents. The end users will represent the total population of pharmacy staff currently employed at Pharxmaco Drugstore. This total enumeration is appropriate because all active staff members are directly involved in the daily operations of the pharmacy and can provide relevant feedback on the system’s usability and efficiency.
+[0115] The end users must have recent and relevant experience in pharmacy operations, particularly in point-of-sale transactions and inventory management. They must also be familiar with the pharmacy’s manual workflow in order to provide accurate and useful responses during the evaluation. Staff members with no direct experience in sales and inventory operations will be excluded from the study.
+[0116] The IT expert respondents must hold a degree in Information Technology or a related field, or have professional experience in software development, system architecture, or quality assurance. They must also be familiar with the ISO/IEC 25010 software quality model. Individuals without technical background or relevant experience will be excluded. These experts will evaluate the system in terms of performance, reliability, maintainability, and security.
+[0117] The inclusion of IT experts is necessary to ensure that the system is assessed from a technical perspective. Their evaluation will complement the feedback of the end users, allowing the researchers to determine both the practical usefulness and technical quality of the proposed system.
+[0118] Sampling Technique
+[0119] This study employs a combination of total enumeration and purposive sampling techniques to select the respondents. These methods are appropriate because they ensure that the participants possess the specific knowledge and experience required to evaluate the system effectively.
+[0120] For end users, the study uses total enumeration. Since the number of pharmacy staff at Pharxmaco Drugstore is limited, the study includes the entire population of staff members currently involved in daily operations. This approach ensures that the feedback collected represents the full range of possible system interactions and does not exclude the perspectives of the primary operational users.
+[0121] For the IT expert respondents, the study uses purposive sampling. This technique is used to deliberately select individuals who possess the necessary professional qualifications, such as an academic degree in Information Technology or relevant experience in software development and quality assurance. Through purposive sampling, the researchers ensure that the selected experts have the technical competence needed to evaluate the system against the ISO/IEC 25010 standard, particularly in terms of functionality, performance efficiency, and security.
+[0122] The use of these sampling techniques ensures that all respondents are qualified to evaluate the system based on both actual operational use and established technical standards. This deliberate selection process prioritizes the quality of feedback over the quantity of respondents and provides the study with focused, reliable, and relevant insights. As a result, the sampling strategy is well suited for assessing the effectiveness, usability, and technical soundness of the proposed system.
+[0123] Instruments of the Study
+[0124] The primary data collection instrument for this study is a set of self-administered questionnaires developed by the researchers to evaluate the proposed Online POS and Inventory System with Sales Forecasting for Pharxmaco Drugstore. This method is appropriate because it allows respondents to provide objective feedback based on their direct experience with the system.
+[0125] The study employs two tailored questionnaires: one for end users and one for IT experts. To ensure a rigorous evaluation, the instruments are aligned with the ISO/IEC 25010 quality model and the study’s core functional requirements. The questionnaires assess key software quality characteristics such as functional suitability, performance efficiency, usability, reliability, security, compatibility, maintainability, and portability.
+[0126] The end-user questionnaire contains twenty items, with five items for SOP 1, ten items for SOP 2, and five items for SOP 3. The ten items under SOP 2 are allotted to the sales forecasting feature and reliable because this is part of the system where end users can assess how the forecasting function helps them anticipate demand and support inventory management.
+[0127] The IT expert questionnaire contains sixty items, with five items for SOP 1, ten items for SOP 2, five items for SOP 3, five items for SOP 4, and forty items for SOP 5, which cover the system’s technical aspects and ISO/IEC 25010 evaluation. The remaining items are allotted for the technical evaluation of the system. This questionnaire is designed to assess the system’s quality based on the ISO/IEC 25010 model, including functional suitability, performance efficiency, usability, reliability, security, compatibility, maintainability, and portability.
+[0128] To ensure the validity and reliability of the findings, the instruments will undergo validation by a panel of experts. This panel includes senior IT professionals who will verify the technical accuracy of the ISO/IEC 25010 categories that are correctly matched, and a language reviewer who will make sure the wording is clear and easy to understand.
+[0129] Questionnaires/ Surveys
+[0130] The research instrument that will be used in this study is a self-developed questionnaire designed to gather relevant data from the respondents. The questionnaire will be carefully constructed based on the objectives of the study and the identified problems related to sales transactions, inventory management, and reporting processes of Pharxmaco Drugstore.
+[0131] To ensure the validity of the instrument, the questionnaire will be reviewed and validated by experts in the field, including IT experts and a grammarian. The experts will evaluate the questionnaire in terms of clarity, relevance, and alignment with the study objectives. Necessary revisions will be made based on their recommendations to improve the overall quality of the instrument.
+[0132] Interview
+[0133] Interviews will be conducted with Mr. Guevarra, the owner of Pharxmaco Drugstore, as well as selected pharmacy staff, to gather relevant information about current sales and inventory processes. The researchers will collect data by observing how the participants perform their daily tasks, such as handling sales transactions, managing inventory, and recording product information.
+[0134] The researchers will spend time in the pharmacy setting to better understand the actual workflow and identify existing challenges in the current system. This approach will allow the researchers to obtain accurate and firsthand information, which will serve as the basis for identifying system requirements and improving the proposed Online Point of Sale (POS) and Inventory System with Sales Forecasting for Pharxmaco Drugstore.
+[0135] Hardware
+[0136] The hardware used in the development and testing of the Pharxmaco Drugstore Management System consisted primarily of a laptop or desktop computer with specifications sufficient for web-based system development, database management, and browser-based testing. The researchers used a computer equipped with at least an Intel Core i3/i5 processor or equivalent, 8 GB of RAM, and adequate storage capacity to support the installation of the local server environment, source code files, database files, and other project resources. 
+[0137] A monitor, keyboard, and mouse were also utilized to facilitate system development, interface design, encoding, and testing. For network-based functionality and multi-user simulation, an internet connection or local area network connection was used as needed. In addition, smartphones were used during testing to check the responsiveness and accessibility of the system interface, especially for users who may access the web-based system on mobile devices. These hardware components were sufficient to support the design, implementation, debugging, and evaluation of the proposed multi-branch pharmacy management system.
+[0138] Software
+[0139] The software used in the development of the Pharxmaco Drugstore Management System included the Windows operating system as the primary platform for development and testing. The system was developed using CodeIgniter 4 as the web application framework, with PHP as the main programming language, HTML, CSS, and JavaScript for the user interface and frontend styling, and MySQL as the database management system.
+[0140] During the development phase, a local server environment such as UniServer was used to run Apache and MySQL services while the system was being built and tested. This setup was used only for development and internal testing. When deployed, the system will be hosted on a web hosting server to make it accessible online through a browser. The final system is designed to function as an online web-based application once deployed.
+[0141] The system was tested using web browsers such as Google Chrome to verify functionality, responsiveness, and usability. Supporting libraries and tools were also integrated into the system, including charting and export functions for reports.
+[0142] The dataset used by the system consisted of pharmacy related transactional and inventory data such as product records, branch inventory, sales transactions, stock movement logs, expiry records, and report data, which were encoded and processed in the database for testing and evaluation purposes. These software tools collectively supported the development, operation, and testing of the proposed system.
+[0143] System/Software/Prototype
+[0144] Flowchart
+[0145] Figure 3. Flowchart Diagram
+[0146] This figure illustrates the overall process flow of the Online Point of Sale and Inventory System with Sales Forecasting. The system begins at the login page, where the user enters their credentials. The system validates and verifies the user, checks the account status, and determines whether the login is valid. If the login is invalid, an error message is displayed, allowing the user to retry. Once authenticated, the system identifies the user's role and directs them to either the Admin Dashboard or the Cashier Dashboard.
+[0147] For the Administrator, the system provides tools to manage users, products, reports, and activity logs, as well as analyze sales data, apply Holt's Exponential Smoothing, compute the Mean Absolute Percentage Error (MAPE), and generate sales and forecasting reports. For the Cashier, the system handles customer purchase transactions by allowing items to be added to the cart, checking if more items will be purchased, processing checkout and payment, and, upon successful payment, recording the sale, updating inventory, and printing the receipt. If payment fails, the system allows the cashier to retry.
+[0148] Overall, the system ensures secure user authentication, efficient transaction processing, accurate inventory management, and reliable sales forecasting to support daily business operations and informed decision-making.
+[0149] Context Flow Diagram
+[0150] Figure 4. Context Flow Diagram
+[0151] This figure illustrates the Context Flow Diagram (CFD) OF the Online Point of Sale and Inventory System for Pharxmaco Drugstore with Sales Forecasting. The system serves as the central process that interacts with three external entities: the Customer, Cashier, and Admin/Owner.
+[0152] The Customer initiates the process by sending a purchase request to the system and, in return, receives a receipt after the transaction is completed. The Cashier interacts with the system by processing sales transactions, sending sales data, and receiving processed sale and receipt details to complete the transaction.
+[0153] Meanwhile, the Admin/Owner manages the system by providing product updates, stock information, and user management data. The system processes this information and returns updated product and inventory data, user records, and sales and forecast reports. 
+[0154] The admin can also request reports for monitoring and decision-making purposes.
+[0155] Overall, the system integrates sales processing, inventory management, and reporting, ensuring efficient data flow between users and supporting the daily operations of the drugstore.
+[0156] Data Flow Diagram
+[0157] Figure 4.1. Data Flow Diagram level 0
+[0158] This figure illustrates the Level 1 Data Flow Diagram (DFD) of the Pharxmaco Drugstore POS and Inventory System with Sales Forecasting. The diagram illustrates the detailed processes and data flow within the system, including the interactions between system processes and data stores.
+[0159] The system consists of several major processes, like Process Sales, Manage Inventory, Sales Forecasting, Generate Reports, and Manage Users and Settings. In the Process Sales module, sales transactions are handled based on customer purchases. The system processes purchase details using product data and applicable discount rates to compute the total amount. It then generates transaction confirmation and official receipts. The processed sales data are stored in the sales data store, while stock deduction Information is forwarded to the inventory management process to ensure accurate stock updates.
+[0160] The Manage Inventory process is responsible for monitoring and maintaining product stock levels. It receives stock deduction data from sales transactions and updates inventory records accordingly. The system records stock movement and inventory updates in the appropriate data stores. It also generates reorder recommendations based on stock levels to support inventory control and ensure product availability.
+[0161] The Sales Forecasting process utilizes historical sales data to generate forecast results. The system analyzes sales history and produces forecast data, which is stored for 
+[0162] future reference. This process helps in predicting demand trends and supports better inventory planning and decision-making. The Manage Users and Settings process enables the management of user accounts, system configurations, and branch information. The system stores and updates user records, configuration settings, and branch data in their respective data stores. This process ensures proper system administration, access control, and maintenance of updated system information.
+[0163] Figure 4.2. Data Flow Diagram level 1
+[0164] This figure illustrates the Data Flow Diagram (DFD) level 1 of the sales transaction process of the proposed Pharxmaco Drugstore POS and Inventory System. This diagram illustrates the detailed flow of sales transactions within the system. The process begins when the cashier initiates a transaction by performing a product search, where product queries are entered into the system to retrieve available product information.
+[0165] The retrieved data is then used in the selection process, where the cashier chooses specific items to be included in the transaction. Once selected, the items are added to the cart, forming the list of products to be purchased. After adding items to the cart, the cashier proceeds with applying discounts. The system retrieves the necessary discount details and applies them to the selected items. The transaction then moves to the computation stage, where the system calculates the total amount based on the selected products and applied discounts. 
+[0166] Following the computation of the total amount, the cashier enters the payment details. The system processes the provided payment information and prepares the transaction for recording. Once completed, the system records the sales transaction and stores the corresponding data for future reference. After successfully saving the transaction, the system generates an official receipt containing the complete details of the sale. This receipt is then provided to the customer as proof of payment. Subsequently, the system updates the sales records to ensure accurate documentation and reporting of transactions. 
+[0167] The finalized sales data are maintained within the system for monitoring and analysis purposes. Finally, the system sends stock deduction information to the inventory module. The inventory records are updated accordingly to reflect the reduced stock levels based on the completed transaction, ensuring accurate and real-time inventory tracking. 
+[0168] Overall, the diagram provides a comprehensive view of how sales transactions are processed, from product selection to payment, recording, generating receipt, and inventory update, ensuring efficiency, accuracy, and proper data management within the system.
+[0169] Figure 4.3. Data Flow Diagram level 2
+[0170] This figure illustrates the Level 2 Data Flow Diagram (DFD) of the inventory management process of the proposed Pharxmaco Drugstore POS and Inventory System.This diagram illustrates the detailed flow of inventory related transactions within the system. The process begins when the staff inputs product details in the added new product process, where product information such as name, category, price, and other relevant data are entered into the system. The collected information is then stored, ensuring that new products are properly registered and available for inventory operations.
+[0171] Once the product is registered, the process continues with updating product information, where staff may modify existing product details. The system processes the Updated data and ensures that all product records remain accurate and up to date. After managing product details, the process proceeds to record stock in, where staff inputs stock quantities for newly delivered or restocked items. The system records these stock entries, ensuring that inventory levels are increased accordingly. Following this, the system handles stock deductions, where inventory quantities are reduced based on sales transactions or manual adjustments. The updated stock levels are recorded to maintain accurate inventory tracking.
+[0172] The process then moves to monitoring stock levels, where the system allows staff to perform product searches and stock inquiries. The system retrieves inventory status,
+[0173] including low stock items, to help staff monitor product availability and identify items that require replenishment. Finally, the process concludes with generating reorder
+[0174] recommendations, where the system evaluates current stock levels and identifies products that fall below the reorder threshold. The system then produces reorder reports and recommendations to support timely purchasing decisions.
+[0175] Overall, the diagram provides a clear and detailed representation of how inventory data flows within the system, ensuring efficient stock management, accurate record keeping, and improved decision-making for inventory control.
+[0176] System Architecture
+[0177] Figure 5. System Architecture Diagram
+[0178] This figure illustrates the proposed system architecture of the Pharxmaco Drugstore Point of Sale and Inventory System with Sales Forecasting. The system allows users, including the admin/owner and cashier, to access the platform through a web-based interface using desktop or mobile devices over the internet.
+[0179] The system processes user inputs through its core modules, including authentication, point of sale transactions, inventory management, stock monitoring, discount processing, and sales forecasting using Holt’s Exponential Smoothing (HES). 
+[0180] The processed data are stored in a MySQL database, ensuring secure and organized data management. The system then generates outputs such as sales receipts, transaction records, inventory reports, low stock alerts, and forecasting results, which support both operational and managerial functions of the drugstore.
+[0181] Network Architecture
+[0182] Figure 6. System Architecture Diagram
+[0183] This figure illustrates the network architecture of the system using a star topology, where all client devices are connected to a central server. The system is hosted on a server that contains both the web application and the database. Users such as the admin and cashier access the system through their respective devices, including desktop computers and mobile phones, via a router or local network connection.
+[0184] In this setup, the router serves as the central communication point, allowing all devices to connect to the server and exchange data efficiently. This architecture enables centralized management, real-time access, and reliable communication between the system components.
+[0185] Entity Relationship Diagram
+[0186] Figure 7. Entity Relationship Diagram
+[0187] This figure illustrates the Entity Relationship Diagram (ERD) of the Online Point of Sale and Inventory System for Pharxmaco Drugstore with Sales Forecasting, showing the structure of the database and the relationships between entities. The system includes key entities such as products, categories, sales, sale_items, users, discounts, stock_logs, activity_logs, and forecasting_data, which store and manage essential business information. Sales transactions are recorded in the sales and sale_items tables, while inventory is managed through products and stock_logs. The system also tracks user activities, applies discounts, and generates forecasting data based on historical sales. Overall, the database design ensures organized data storage, accurate transaction processing, and efficient inventory and sales management.
+[0188] Simple Exponential Smoothing (SES)
+[0189] Simple Exponential Smoothing (SES) is a foundational forecasting method used for data that is relatively stable and does not show a clear upward or downward trend. It works on the principle that the most recent data points are more representative of the future than older ones (Abdelati & Abdelwali, 2024). Therefore, it assigns exponentially decreasing weights to older observations, giving the most "weight" to the most recent actual sales.
+[0190] In the context of a drugstore, SES would be used for products with steady, consistent demand (e.g., standard supplies like cotton or basic alcohol) where sales neither grow significantly nor decline over time.
+[0191] The forecast for the next period is calculated as
+[0192]                                                  Ft+1=αAt+1-αFt
+[0193] Ft+1:   
+[0194] At:      The actual sales of the current period.
+[0195] Ft:      The previously calculated forecast for the current period.
+[0196] α   (Alpha) : The smoothing constant (between 0 and 1). 
+[0197] A higher alpha makes the forecast more reactive to the most recent data, while a lower alpha makes it smoother and less reactive to sudden spikes.
+[0198] Sample Computation:
+[0199] Assume you want to forecast sales for the next day.
+[0200] Actual Sales today (At):       100 units
+[0201]             Previous Forecast  (Ft):       90 units
+[0202] Smoothing constant  (α   ) :   0.3
+[0203] Computation:
+[0204] Ft+1=0.3×100+1-0.3×90
+[0205] Ft+1=30+0.7×90
+[0206] Ft+1=30+63
+[0207] Ft+1=93
+[0208] The forecast for the next period is 93 units. Because the smoothing constant is 0.3, the model adjusted the previous forecast of 90 slightly upward toward the actual sales of 100, but did not jump all the way to 100, effectively "smoothing out" the data.
+[0209]  Holt’s Exponential Smoothing
+[0210] Holt’s Exponential Smoothing, also known as Double Exponential Smoothing, was selected as the forecasting method because pharmacy sales data may exhibit gradual increases or decreases over time. The method is suitable for demand forecasting in inventory systems because it can capture trend behavior in sales data (Kumar et al., 2024). This makes it more suitable for the proposed Online Point of Sale and Inventory System for Pharxmaco Drugstore with Sales Forecasting, where demand may change over time. The method remains efficient, relatively simple to implement, and supports real-time computation within the system.
+[0211] The daily forecasting module processes raw daily transaction data to project demand for the following day. By accounting for recent sales trends, the system dynamically adjusts to immediate fluctuations in market activity. This high-frequency analysis is critical for monitoring fast-moving consumer goods and ensuring optimal stock availability for the pharmacy.
+[0212] The weekly forecasting module uses aggregated weekly sales data to forecast future demand. By consolidating daily data into weekly intervals, the model filters out day-to-day noise and short-term volatility, allowing it to capture broader sales trends. This level of detail is useful for planning routine restocking cycles and maintaining overall inventory health.
+[0213] Finally, the monthly forecasting module operates on aggregated monthly data to provide a longitudinal perspective of demand patterns. By smoothing out seasonal and weekly variances, this forecasting interval supports high level organizational objectives, including long term procurement planning, financial budgeting, and strategic resource allocation.
+[0214] The system applies Holt’s Exponential Smoothing using the following formulas:
+[0215] Level:Fₜ = αAₜ + (1 − α) (Fₜ₋₁ + Tₜ₋₁)
+[0216] Trend:Tₜ = β (Fₜ − Fₜ₋₁) + (1 − β) Tₜ₋₁
+[0217] Forecast:Fₜ₊₁ = Fₜ + Tₜ
+[0218] where Fₜ represents the current level or smoothed value, Tₜ denotes the trend component, Aₜ is the actual sales, α is the smoothing constant for the level, and β is the smoothing constant for the trend. In this study, α = 0.3 and β = 0.2 were used to balance responsiveness and stability, allowing the system to adapt to recent changes while maintaining consistency in forecasting.
+[0219] The initial values for the level and trend are determined using historical data. The initial level is based on the first observed sales value, while the initial trend is calculated from the difference between early data points. These initial values are necessary to start the iterative forecasting process.
+[0220] To demonstrate the computation, assume that the actual sales (Aₜ) is 1,000 units, the previous level (Fₜ₋₁) is 900 units, the previous trend (Tₜ₋₁) is 50 units, α = 0.3, and β = 0.2.
+[0221] Level computation: Fₜ = (0.3 × 1000) + (0.7 × (900 + 50)) Fₜ = 300 + (0.7 × 950) Fₜ = 300 + 665 Fₜ = 965
+[0222] Trend computation: Tₜ = (0.2 × (965 − 900)) + (0.8 × 50) Tₜ = (0.2 × 65) + 40 Tₜ = 13 + 40 Tₜ = 53
+[0223] Forecast computation: Fₜ₊₁ = 965 + 53 Fₜ₊₁ = 1,018
+[0224] The computed forecast for the next period is 1,018 units. This result reflects both the current sales level and the upward trend, enabling the system to generate more accurate predictions compared to methods that do not consider trends. In the implementation of the system, actual sales data are retrieved from the database, previous level and trend values are obtained, and the formulas are applied using the defined constants. The computed forecast is then stored in the forecasting table and utilized for inventory planning and report generation.
+[0225] Holt’s vs Simple Exponential Smoothing
+[0226] The fundamental difference between these two methods lies in their ability to process change over time. Simple Exponential Smoothing is a univariate forecasting technique designed for stationary data, meaning it assumes that the sales figures will fluctuate around a constant average without any underlying growth or decline. It relies on a single smoothing constant to update the level, effectively weighing the most recent observation while ignoring the momentum of the data. Consequently, this method is suited for a dynamic retail environment because it consistently produces a lagging forecast that fails to capture the trajectory of sales movement.
+[0227] Holt’s Exponential Smoothing, also referred to as Double Exponential Smoothing, significantly advances this capability by incorporating a secondary smoothing constant to account for a trend component. This structure allows the algorithm to explicitly model the direction and speed of change within the sales data, effectively capturing both the current level of demand and the rate at which that demand is evolving. By maintaining these two distinct parameters, the system can anticipate future values based on observed momentum rather than relying on a static historical average.
+[0228] Holt’s method is the superior choice because it provides a proactive rather than a reactive forecast. Pharmacy inventory management requires high precision to prevent both stockouts and excessive inventory carrying costs or over investment in working capital. Because Holt’s method accounts for the trend, it can adjust for increasing demand during peak seasons or decreasing interest in certain products, ensuring that the replenishment logic remains aligned with actual store performance. This technical robustness ensures that the forecasting feature provides genuine operational utility, justifying its selection over the more limited Simple Exponential Smoothing model.
+[0229] Figure 8. Holt’s Exponential Smoothing
+[0230] This figure illustrates the application of Holt’s Exponential Smoothing in forecasting passenger volume over time. The blue line represents the training data, which shows the historical trend of passenger volume from earlier periods. The orange line represents the test data, indicating the actual observed values used to evaluate the forecasting performance. The green line shows the simple forecasting method, which produces a relatively constant or linear projection and does not fully capture the upward trend present in the data. In contrast, the red line represents Holt’s Exponential Smoothing forecast, which incorporates both the level and trend components of the time series. Holt’s method demonstrates a better ability to follow the increasing trend of data compared to the simple method. By accounting for both the current level and the direction of change, it provides a more accurate and responsive forecast. This makes Holt’s Exponential Smoothing more suitable for time series data with a clear trend pattern, such as sales or demand forecasting in business systems.
+[0231] Sales Forecasting Flowchart
+[0232] Figure 9. Sales Forecasting Flowchart
+[0233] This figure illustrates the step by step process of generating sales forecasts using Holt’s Exponential Smoothing method in the system. The process begins with retrieving historical sales data (Aₜ) from the database, which serves as the input for forecasting. The system then initializes the level (Fₜ) and trend (Tₜ) values based on historical data to establish starting points for computation.
+[0234] Next, the system computes the updated level using the current actual sales and previous values, followed by the computation of the trend component, which captures the direction of sales movement over time. After obtaining the updated level and trend, the system calculates the forecast for the next period (Fₜ₊₁) by combining these two components.
+[0235] The computed forecast is then stored in the database for future reference and analysis. Finally, the results are displayed in the reports or dashboard, allowing users to utilize the forecast for inventory planning and decision making. The process ends after successfully generating and presenting the forecast output.
+[0236] Use Case Diagram
+[0237] Figure 10. Use Case
+[0238] This figure illustrates the Use Case Diagram of Development of an Online Point of Sale and Inventory System with Sales Forecasting, illustrating how the Admin/Owner and Cashier Interact with the system.
+[0239] The Admin/Owner has full access to all system functions. This includes Process Transaction, Generate Reports, Update Inventory, Sales Forecasting, Manage Products and Details, and User Management. The admin is responsible for overseeing the entire system of operation. Through the Manage Products and Details module, the admin can add, update, and maintain product information such as prices, stock levels, and descriptions. The Update Inventory module allows the admin to monitor and control stock levels in real time. The Generate Reports module provides sales and inventory reports that help in making informed business decisions. In addition, the Sales Forecasting module enables the admin to analyze past sales data and predict future demand. The User Management module allows the admin to create accounts, assign roles, and control access permissions of other users in the system.
+[0240] The Cashier interacts mainly with the Process Transaction module. The Cashier is responsible for handling customer purchases, recording sales transactions, and issuing receipts. Every transaction made by the Cashier automatically updates the inventory system in real time, ensuring accurate stock records. However, the Cashier does not have access to sensitive functions such as Sales Forecasting, Report Generation, Product Management, or User Management. This limitation ensures system security and prevents unauthorized changes to important data. 
+[0241] Overall, the diagram shows a clear distinction between the Admin/Owner, who oversees and manages the entire system, and the Cashier, who handles only transaction related functions.
+[0242] Data Dictionary
+[0243] Table 1: Users
+[0244] Field Name
+[0245] Data Type
+[0246] Key
+[0247] Description
+[0248] id
+[0249] int
+[0250] PK
+[0251] User ID
+[0252] full_name
+[0253] varchar
+[0254] -
+[0255] Full name
+[0256] username
+[0257] varchar
+[0258] Unique
+[0259] Login username
+[0260] password
+[0261] varchar
+[0262] -
+[0263] Encrypted password
+[0264] role
+[0265] enum
+[0266] -
+[0267] Admin or Cashier
+[0268] branch_id
+[0269] int
+[0270] FK
+[0271] Assigned branch
+[0272] status
+[0273] enum
+[0274] -
+[0275] Active/Inactive
+[0276] created_at
+[0277] timestamp
+[0278] -
+[0279] Created date
+[0280] updated_at
+[0281] timestamp
+[0282] -
+[0283] Updated date
+[0284] Table 2: Branches
+[0285] Field Name
+[0286] Data Type
+[0287] Key
+[0288] Description
+[0289] id
+[0290] int
+[0291] PK
+[0292] Branch ID
+[0293] branch_name
+[0294] varchar
+[0295] -
+[0296] Branch name
+[0297] branch_code
+[0298] varchar
+[0299] Unique
+[0300] Branch code
+[0301] address
+[0302] text
+[0303] -
+[0304] Location
+[0305] contact_number
+[0306] varchar
+[0307] -
+[0308] Contact
+[0309] status
+[0310] enum
+[0311] -
+[0312] Active/Inactive
+[0313] Table 3: Categories
+[0314] Field Name
+[0315] Data Type
+[0316] Key
+[0317] Description
+[0318] id
+[0319] int
+[0320] PK
+[0321] Category ID
+[0322] category_name
+[0323] varchar
+[0324] Unique
+[0325] Category name
+[0326] Table 4: Products
+[0327] Field Name
+[0328] Data Type
+[0329] Key
+[0330] Description
+[0331] id
+[0332] int
+[0333] PK
+[0334] Product ID
+[0335] product_name
+[0336] varchar
+[0337] -
+[0338] Product name
+[0339] category_id
+[0340] int
+[0341] FK
+[0342] Category reference
+[0343] sku
+[0344] varchar
+[0345] Unique
+[0346] SKU code
+[0347] price
+[0348] decimal
+[0349] -
+[0350] Selling price
+[0351] status
+[0352] enum
+[0353] -
+[0354] Active/Inactive
+[0355] Table 5: Branch Products
+[0356] Field Name
+[0357] Data Type
+[0358] Key
+[0359] Description
+[0360] id
+[0361] int
+[0362] PK
+[0363] Record ID
+[0364] branch_id
+[0365] int
+[0366] FK
+[0367] Branch
+[0368] product_id
+[0369] int
+[0370] FK
+[0371] Product
+[0372] stock
+[0373] int
+[0374] -
+[0375] Stock per branch
+[0376] price
+[0377] decimal
+[0378] -
+[0379] Branch price
+[0380] expiration_date
+[0381] date
+[0382] -
+[0383] Expiry
+[0384] Table 6: Sales
+[0385] Field Name
+[0386] Data Type
+[0387] Key
+[0388] Description
+[0389] id
+[0390] int
+[0391] PK
+[0392] Sale ID
+[0393] invoice_no
+[0394] varchar
+[0395] Unique
+[0396] Invoice
+[0397] user_id
+[0398] int
+[0399] FK
+[0400] Cashier
+[0401] branch_id
+[0402] int
+[0403] FK
+[0404] Branch
+[0405] total_amount
+[0406] decimal
+[0407] -
+[0408] Total
+[0409] final_total
+[0410] decimal
+[0411] -
+[0412] Final amount
+[0413] payment_method
+[0414] enum
+[0415] -
+[0416] Payment type
+[0417] status
+[0418] enum
+[0419] -
+[0420] Sale status
+[0421] Table 7: Sale Items
+[0422] Field Name
+[0423] Data Type
+[0424] Key
+[0425] Description
+[0426] id
+[0427] int
+[0428] PK
+[0429] Item ID
+[0430] sale_id
+[0431] int
+[0432] FK
+[0433] Sale reference
+[0434] product_id
+[0435] int
+[0436] FK
+[0437] Product
+[0438] quantity
+[0439] int
+[0440] -
+[0441] Qty sold
+[0442] price
+[0443] decimal
+[0444] -
+[0445] Price
+[0446] subtotal
+[0447] decimal
+[0448] -
+[0449] Subtotal
+[0450] Table 8: Stock Logs
+[0451] Field Name
+[0452] Data Type
+[0453] Key
+[0454] Description
+[0455] id
+[0456] int
+[0457] PK
+[0458] Log ID
+[0459] product_id
+[0460] int
+[0461] FK
+[0462] Product
+[0463] branch_id
+[0464] int
+[0465] FK
+[0466] Branch
+[0467] action_type
+[0468] enum
+[0469] -
+[0470] Stock movement
+[0471] quantity
+[0472] int
+[0473] -
+[0474] Qty
+[0475] Table 9: Discounts
+[0476] Field Name
+[0477] Data Type
+[0478] Key
+[0479] Description
+[0480] id
+[0481] int
+[0482] PK
+[0483] Discount ID
+[0484] discount_name
+[0485] varchar
+[0486] -
+[0487] Name
+[0488] discount_type
+[0489] enum
+[0490] -
+[0491] Type
+[0492] discount_value
+[0493] decimal
+[0494] -
+[0495] Value
+[0496] Table 10: Forecasting Data
+[0497] Field Name
+[0498] Data Type
+[0499] Key
+[0500] Description
+[0501] id
+[0502] int
+[0503] PK
+[0504] Forecast ID
+[0505] product_id
+[0506] int
+[0507] FK
+[0508] Product
+[0509] forecast_month
+[0510] date
+[0511] -
+[0512] Month
+[0513] predicted_quantity
+[0514] int
+[0515] -
+[0516] Forecast qty
+[0517] Table 11: Activity Logs
+[0518] Field Name
+[0519] Data Type
+[0520] Key
+[0521] Description
+[0522] id
+[0523] int
+[0524] PK
+[0525] Log ID
+[0526] user_id
+[0527] int
+[0528] FK
+[0529] User
+[0530] activity
+[0531] text
+[0532] -
+[0533] Action
+[0534] log_time
+[0535] timestamp
+[0536] -
+[0537] Date/time
+[0538] Table 12: Report Exports
+[0539] Field Name
+[0540] Data Type
+[0541] Key
+[0542] Description
+[0543] id
+[0544] int
+[0545] PK
+[0546] Export ID
+[0547] user_id
+[0548] int
+[0549] -
+[0550] User
+[0551] branch_id
+[0552] int
+[0553] FK
+[0554] Branch
+[0555] gross_sales
+[0556] decimal
+[0557] -
+[0558] Sales
+[0559] net_sales
+[0560] decimal
+[0561] -
+[0562] Net
+[0563] Figure 11. Data Dictionary
+[0564] Figure 11 presents the Data Dictionary of the Pharxmaco Drugstore Point of Sale and Inventory System. The data dictionary provides a detailed description of all data elements used in the system, including field names, data types, keys, and their corresponding descriptions. The data dictionary serves as a reference for understanding the structure and organization of the database. It includes essential tables such as Users, Branches, Categories, Products, Branch Products, Sales, Sale Items, Discounts, Stock Logs, Forecasting Data, Activity Logs, and Report Exports. Each table contains specific attributes that define the data being stored. For instance, the Users table stores account information such as full name, username, password, role, and assigned branch, while the Branches table contains information about different store locations. The Products and Categories tables organize product details and classifications. The Branch Products table manages inventory per branch, including stock levels, reorder thresholds, and expiration dates, enabling efficient stock monitoring and FEFO (First Expired, First Out) implementation. The Sales and Sale Items tables record transaction details, ensuring accurate tracking of purchased products and financial data. Additionally, the Discounts table manages promotional deductions, while the Stock Logs table records inventory movements. The Forecasting Data table supports demand prediction, and the Activity Logs table ensures system auditability by tracking user actions. 
+[0565] Overall, the data dictionary ensures consistency, accuracy, and clarity in database design, serving as a foundation for system development, maintenance, and future enhancements.
+[0566] Data Gathering Procedure
+[0567] The data gathering procedure for this study will be carried out in a systematic and chronological manner to ensure that the information collected is accurate, relevant, and reliable.
+[0568] First, the researchers will secure access to a sample dataset from Kaggle to serve as the basis for testing the forecasting module of the proposed system. The sample data will be used to evaluate whether the forecasting feature functions correctly before the system is deployed for real-world use.
+[0569] Second, the researchers will coordinate the testing activities to ensure that the sample data are properly prepared and compatible with the system requirements. The dataset will be reviewed to determine its structure, completeness, and suitability for forecasting.
+[0570] Third, the researchers will analyze the sample data and use the findings as the basis for developing the proposed Online Point of Sale and Inventory System with Sales Forecasting. The data will be used to test the sales forecasting module, specifically covering the available time period in the sample dataset.
+[0571] Fourth, after the system is developed, it will undergo internal testing to ensure that all functions, including sales processing, inventory updating, and forecasting logic, operate correctly. The forecasting results will be evaluated using an accuracy metric such as Mean Absolute Percentage Error (MAPE) and, if applicable, compared with a simple forecasting method.
+[0572] Finally, after the system has been tested, survey questionnaires will be administered to the selected pharmacy staff and IT expert respondents. The respondents will evaluate the system using a 5-point Likert scale in terms of functionality, usability, performance, and forecasting accuracy. The collected survey data will then be analyzed using the weighted mean to determine the overall effectiveness of the proposed system.
+[0573] Data Processing, Data Cleaning
+[0574] Figure 12. Data Processing and Cleaning Flowchart 
+[0575] This figure illustrates the systematic workflow of data processing and data cleaning in transforming raw historical sales data into a clean and reliable form for forecasting. The raw sales data are filtered, deduplicated, imputed, validated, and arranged chronologically before being stored as cleaned historical sales data. The cleaned sales data are then used in Holt’s Exponential Smoothing to produce sales forecasts, while MAPE is applied to measure forecast accuracy. The results are displayed in reports and graphs for admin review and decision-making.
+[0576] Input Data
+[0577] The forecasting module uses sample sales data obtained from the Kaggle dataset created by Milan Zdravković under the study of Pharma sales data analysis and forecasting. The system uses a 24-month dataset for testing and forecasting evaluation. These records contain transaction date, medicine name, quantity sold, unit price, and total sales, and they serve as the raw input for the data cleaning and forecasting procedures used in the system.
+[0578] Data cleaning is necessary because raw sales records may contain irrelevant entries, duplicate records, missing values, or invalid information that can affect the accuracy of the analysis. To improve data quality, the system applies filtering to remove unnecessary records, deduplication to eliminate repeated entries, imputation to fill missing values, validation to check correctness and consistency, and chronological arrangement to organize the sales data in time order.
+[0579] Data Cleaning
+[0580] To ensure high data integrity and prevent errors in our predictive analytics, the system executes the following automated cleaning protocols before processing any information.
+[0581] Filtering - The system removes irrelevant or unnecessary sales records to ensure that only useful historical sales data are included for analysis.
+[0582] Deduplication - The system scans the sales records for repeated entries and removes duplicates so that each sale is counted only once.
+[0583] Imputation - The system identifies missing or incomplete sales values and fills them using appropriate replacement values to maintain completeness and ensure that the historical sales data remain suitable for forecasting.
+[0584] Validation - The system checks the cleaned sales data for accuracy, consistency, and completeness. If a record still contains missing, invalid, or inconsistent information, it is flagged for correction before being allowed to proceed to forecasting.
+[0585] Chronological Arrangement – The system organizes validated sales records in time order so that the historical sales trend can be properly analyzed.
+[0586] Forecast Preparation - The cleaned and ordered historical sales data are then stored and prepared for Holt’s forecasting, with MAPE used to measure prediction accuracy.
+[0587] Error Handling - If an invalid or incomplete record is detected, the system flags it for correction before it can be processed further.
+[0588] Forecasting Evaluation
+[0589] After the data have been cleaned and organized, they are stored as cleaned historical sales data and prepared for forecasting. Holt’s Exponential Smoothing is then applied to generate predicted future sales values based on historical sales trends. To assess the accuracy of the forecasting model, the forecasted values are compared with the actual sales data using Mean Absolute Percentage Error (MAPE), which measures the average percentage difference between actual and forecasted values. 
+[0590] Formula:
+[0591] Where:
+[0592] A = Actual value
+[0593] F = Forecasted value
+[0594] n = Number of forecast periods
+[0595] The resulting MAPE value indicates the forecasting accuracy of the model. Lower MAPE values represent more accurate forecasts, while higher values indicate larger forecasting errors.
+[0596] The interpretation of MAPE values is shown below:
+[0597] MAPE Range
+[0598] Interpretation
+[0599] Less than 10%
+[0600] Highly Accurate Forecast
+[0601] 10% – 20%
+[0602] Good Forecast
+[0603] 20% – 50%
+[0604] Reasonable Forecast
+[0605] Greater than 50%
+[0606] Poor Forecast
+[0607] The computed MAPE value will be used to determine the effectiveness and reliability of the forecasting module in predicting future inventory demand.
+[0608] Likert Scale
+[0609] SCALE
+[0610] INTERPRETATION
+[0611] 5
+[0612] Strongly Agree
+[0613] 4
+[0614] Agree
+[0615] 3
+[0616] Neutral
+[0617] 2
+[0618] Disagree
+[0619] 1
+[0620] Strongly Disagree
+[0621] Table 1. Likert Scale
+[0622] The illustrate table presents the Likert scale used in the study. The scale ranges from 1 to 5, where 5 stands for Strongly Agree and 1 represents Strongly Disagree. This scale was used to measure the level of agreement of the respondents regarding the functionality, usability, and overall performance of the proposed system. Each response was assigned a corresponding numerical value to facilitate statistical analysis using the weighted mean.
+[0623] Scoring Index
+[0624] The scoring index was used to determine the average rating of the respondents for each statement in the questionnaire. The responses were analyzed using the weighted mean, which is appropriate for interpreting data obtained from a Likert scale.
+[0625] The formula used is as follows:
+[0626] Where:
+[0627] f = frequency of responses 
+[0628] x = numerical weight of each response 
+[0629] N = total number of respondents 
+[0630] Descriptive Rating Scale
+[0631] Scale
+[0632] Range
+[0633] Interpretation
+[0634] 5
+[0635] 4.21 – 5.00
+[0636] Strongly Agree
+[0637] 4
+[0638] 3.41 – 4.20
+[0639] Agree
+[0640] 3
+[0641] 2.61 – 3.40
+[0642] Neutral
+[0643] 2
+[0644] 1.81 – 2.60
+[0645] Disagree
+[0646] 1
+[0647] 1.00 – 1.80
+[0648] Strongly Disagree
+[0649] Table 2. Scoring Table
+[0650] The illustrate table 2 represents the mean range used in interpreting the results of the Likert scale responses. The computed weighted mean values were classified according to the corresponding interpretation and description to determine the level of acceptability and effectiveness of the proposed system.
+[0651] Ethical Considerations
+[0652] The researchers strictly adhered to ethical standards throughout the development and evaluation of the Online Point of Sale and Inventory System for Pharxmaco Drugstore. This study prioritizes the rights, safety, and privacy of all participants, ensuring that the research process remains transparent, secure, and fully compliant with national regulations. Adherence to the Data Privacy Act of 2012 (RA 10173)
+[0653] This study operates in strict accordance with the principles set forth in Republic Act No. 10173. The researchers maintain these standards through three core mandates,
+[0654] Transparency - Participants are provided with clear, accessible information regarding the nature of the data collection, the specific processing methods used, and the intended purpose of the study. This ensures that every respondent makes an informed decision before participating.
+[0655] Legitimate Purpose - Data are collected exclusively for academic and research objectives. The information is utilized solely to analyze and improve the drugstore's inventory management and sales forecasting capabilities, ensuring no data is misappropriated for commercial or unrelated interests.
+[0656] Proportionality - To minimize privacy risks, the researchers observe the principle of data minimization. Only information directly relevant to the study’s objectives is gathered, ensuring that the data collected is adequate, necessary, and not excessive.
+[0657] To protect the integrity of the information gathered, the study implements robust data management protocols.
+[0658] Anonymization - To prevent the identification of individual respondents, all personally identifiable information (PII) such as names, contact details, or specific identifying addresses is removed or replaced with unique identifiers. This ensures that individual survey responses cannot be linked back to the participants.
+[0659] Secure Storage - All raw data files are stored in a centralized, encrypted, and password protected repository. This digital storage environment is designed to prevent unauthorized access, accidental alteration, or premature disclosure.
+[0660] Restricted Access – Access to the collected data shall be limited exclusively to the primary researchers of the study. Third parties, including management staff not directly involved in the research, shall not be permitted to access raw survey responses or participant records.
+[0661] Data Retention and Disposal - A clear retention policy is in place. Upon the conclusion and validation of the final research report, digital data will be permanently deleted, and any physical documentation will be securely shredded.
+[0662] These measures provide a comprehensive framework that protects participant interests while ensuring that the research remains credible and legally sound throughout the implementation of the Pharxmaco Drugstore system
+[0663] A. Appendix
+[0664] End User
+[0665] Statement of the Problem and Questions
+[0666] 1
+[0667] 2
+[0668] 3
+[0669] 4
+[0670] 5
+[0671] Remarks
+[0672] SOP 1 – How can the proposed system be designed to efficiently manage sales and inventory records of Pharxmaco?
+[0673] The system accurately records and tracks pharmaceutical inventory items in real-time.
+[0674] The point-of-sale transaction process is completed without system errors.
+[0675] The system generates accurate sales reports for daily store operations.
+[0676] The system reduces the time required to manually input inventory or sales data.
+[0677] The system features are complete and meet the essential operational needs of the Pharxmaco Drugstore.
+[0678] SOP 2 – How reliable is the proposed Online Point of Sale and Inventory System with Sales Forecasting in generating accurate and comprehensive business reports?
+[0679] The user interface is intuitive and easy to navigate.
+[0680] The dashboard layout allows quick access to essential features.
+[0681] The system provides clear feedback after each action.
+[0682] The terms and labels used in the system are easy to understand
+[0683] The overall design of the application enhances the efficiency of daily pharmacy tasks.
+[0684] The system accurately predicts which items I will need in the coming weeks.
+[0685] The sales trends shown by the system are consistent with my current store sales.
+[0686] The system’s ability to forecast demand helps me manage my inventory levels better.
+[0687] The sales forecasting data helps me decide which products to restock promptly.
+[0688] I feel confident in the accuracy of the sales predictions provided by the system.
+[0689] SOP 3 – How can the proposed system implement user access control to ensure that only authorized users can access and manage system functions?
+[0690] I find the login process easy to follow and secure.
+[0691] I am confident that the system identifies the correct user based on my assigned role.
+[0692] The system effectively restricts unauthorized users from accessing sensitive functions.
+[0693] I feel secure using the system to process private store and customer information.
+[0694] The system provides a clear way for me to log out or secure my session when done.
+[0695] IT EXPERT
+[0696] Statement of the Problem and Questions
+[0697] 1
+[0698] 2
+[0699] 3
+[0700] 4
+[0701] 5
+[0702] Remarks
+[0703] SOP 1 – How can the proposed system be designed to efficiently manage sales and inventory records of Pharxmaco?
+[0704] The system accurately records and tracks pharmaceutical inventory items in real-time.
+[0705] The point-of-sale transaction process is completed without system errors.
+[0706] The system generates accurate sales reports for daily store operations.
+[0707] The system reduces the time required to manually input inventory or sales data.
+[0708] The system features are complete and meet the essential operational needs of the Pharxmaco Drugstore.
+[0709] SOP 2 – How reliable is the proposed Online Point of Sale and Inventory System with Sales Forecasting in generating accurate and comprehensive business reports?
+[0710] The user interface is intuitive and easy to navigate.
+[0711] The dashboard layout allows quick access to essential features.
+[0712] The system provides clear feedback after each action.
+[0713] The terms and labels used in the system are easy to understand
+[0714] The overall design of the application enhances the efficiency of daily pharmacy tasks.
+[0715] The system accurately predicts which items I will need in the coming weeks.
+[0716] The sales trends shown by the system are consistent with my current store sales.
+[0717] The system’s ability to forecast demand helps me manage my inventory levels better.
+[0718] The sales forecasting data helps me decide which products to restock promptly.
+[0719] I feel confident in the accuracy of the sales predictions provided by the system.
+[0720] SOP 3 – How can the proposed system implement user access control to ensure that only authorized users can access and manage system functions?
+[0721] I find the login process easy to follow and secure.
+[0722] I am confident that the system identifies the correct user based on my assigned role.
+[0723] The system effectively restricts unauthorized users from accessing sensitive functions.
+[0724] I feel secure using the system to process private stores and customer information.
+[0725] The system provides a clear way for me to log out or secure my session when done.
+[0726] SOP 4 – How can the proposed Online Point of Sale and Inventory System with Sales Forecasting contribute to Sustainable Development Goal 9, particularly Target 9.5, by promoting technological innovation and digital adoption among small and medium-sized enterprises (SMEs)? 
+[0727] The system utilizes modern software architecture to promote digital transformation in SME business processes.
+[0728] The system supports digital use in small and medium-sized businesses (SMEs).
+[0729] The system improves work efficiency using modern technology.
+[0730] The system helps improve decision-making using system data.
+[0731] The system serves as a viable model for digital adoption within the local pharmacy industry.
+[0732] SOP 5 – How can the proposed system be evaluated using the ISO/IEC 25010 Software Quality Model in terms of functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, and portability?
+[0733] System Functionality
+[0734] The system features cover all identified pharmacy inventory requirements.
+[0735] The system correctly implements all necessary sales calculation logic.
+[0736] The forecasting module produces results aligned with business specifications.
+[0737] The system successfully handles edge cases such as returns and expired items.
+[0738] The system features are complete and eliminate the need for external manual tools.
+[0739] System Performance Efficiency 
+[0740] The system loads inventory data quickly across all devices.
+[0741] The system remains stable during high volumes of transactions.
+[0742] The system runs smoothly on standard computers and mobile devices without using excessive memory.
+[0743] The system is designed for fast data retrieval and report generation.
+[0744] The system maintains consistent performance when multiple users are logged in simultaneously on different devices.
+[0745] System Compatibility
+[0746] The system functions correctly across Chrome, Firefox, and Edge browsers.
+[0747] The interface adjusts properly to different screen sizes.
+[0748] The system is compatible with standard external hardware used in pharmacy operations.
+[0749] The system provides consistent experience across operating systems.
+[0750] The system allows data to export into standard formats such as Excel and PDF.
+[0751] System Usability
+[0752] The user interface follows consistent design patterns.
+[0753] The system provides clear and descriptive error messages.
+[0754] The navigation flow is logically structured.
+[0755] The system provides visual confirmation for user actions.
+[0756] The interface is accessible and legible for daily use.
+[0757] System Reliability
+[0758] The system demonstrates high availability without unexpected crashes.
+[0759] The system can recover properly after minor interruptions.
+[0760] The system maintains data integrity during errors or network drops
+[0761] The system provides accurate audit logs for data modification events.
+[0762] The system handles invalid inputs without terminating the application.
+[0763] System Security
+[0764] The system uses secure login methods to keep user accounts safe.
+[0765] The system limits what each user can do based on their specific role (Admin, Staff).
+[0766] The system follows the Data Privacy Act (RA 10173) to protect sensitive information.
+[0767] The system prevents unauthorized users from accessing sensitive management or backend tools.
+[0768] The system records all logins and user activities to monitor suspicious behavior.
+[0769] System Maintainability
+[0770] The system code is clean and structured, making it easy to update.
+[0771] The system is designed to allow new features to be added without breaking existing ones.
+[0772] System errors are easy to identify and fix.
+[0773] System settings can be updated easily without having to change the main code
+[0774] The system design is well documented, making it easy for other developers to understand how it works.
+[0775] System Portability
+[0776] The system can be accessed from any location with an internet connection.
+[0777] The system works consistently whether hosted on a web server or cloud platform.
+[0778] The system does not require special software installation on the user’s computer.
+[0779] The system can be migrated to another hosting provider if necessary.
+[0780] The system remains functional across different deployment environments.
+[0781] REFERENCES
+[0782] Boyko, N., & Salabay, B. (2026). Assessing sales forecasting methods: A comparative evaluation of exponential smoothing models and SutteARIMA. Applied Computational Intelligence and Soft Computing, 2026, Article 6686245. https://doi.org/10.1155/acis/6686245
+[0783] Burinskiene, A. (2022). Forecasting model: The case of the pharmaceutical retail. Frontiers in Medicine, 9, Article 582186. https://doi.org/10.3389/fmed.2022.582186
+[0784] Divina, J., Olan, A., Perez, N. C., Sarmiento, M., & Acepcion, R. (2025). Data-driven point-of-sale and inventory system for Pastil Sa Tabi: Integrating sales forecasting algorithms and predictive analytics. International Journal of Research and Innovation in Applied Science, 10(10), 1–8. https://doi.org/10.51584/IJRIAS.2025.1010000066
+[0785] Fourkiotis, K. P., & Tsadiras, A. (2024). Applying machine learning and statistical forecasting methods for enhancing pharmaceutical sales predictions. Forecasting, 6(1), 170–186. https://doi.org/10.3390/forecast6010010
+[0786] Garcia, C. P. C., Camile, L. J. C., Dagohoy, N. A., Diang, F. A., & Badiang, R. O., Jr. (2024). hereMeds: An online sales and inventory content management, pharmacy finder, and reminder system. In Proceedings of the 6th World Symposium on Software Engineering (pp. 105–112). https://doi.org/10.1145/3698062.3698072
+[0787] George, S., & Elrashid, S. (2023). Inventory management and pharmaceutical supply chain performance of hospital pharmacies in Bahrain: A structural equation modeling approach. SAGE Open, 13(1). https://doi.org/10.1177/215824402211497
+[0788] Hewage, H. C., Perera, H. N., & Bandara, K. (2026). Enhancing demand forecasting in retail: A comprehensive analysis of sales promotional effects on the entire demand life cycle. Journal of Forecasting, 45(2), 112–130. https://doi.org/10.1002/for.70039
+[0789] İmece, S., & Beyca, Ö. F. (2022). Demand forecasting with integration of time series and regression models in pharmaceutical industry. International Journal of Advanced Engineering and Pure Sciences, 34(3), 415–425. https://doi.org/10.7240/jeps.1127844
+[0790] Ismail, U., Khosa, S. N., Tahir, S., Ahmad, M. A., Hussain, W., Akram, U., & Mushtaq, M. F. (2025). Hybrid machine learning models for optimizing retail market and inventory forecasting. Journal of Computing & Biomedical Informatics, 9(1), 45–58. https://doi.org/10.56979/901/2025
+[0791] Lalou, P., Ponis, S. T., & Efthymiou, O. K. (2020). Demand forecasting of retail sales using data analytics and statistical programming. Sciendo.
+[0792] Mahmud Jewel, R., Linkon, A. A., Shaima, M., Badruddowza, Sarker, M. S. U., Shahid, R., Nabi, N., Rana, M. N. U., Shahriyar, M. A., Hasan, M., & Hossain, M. J. (2024). Comparative analysis of machine learning models for accurate retail sales demand forecasting. Journal of Computer Science and Technology Studies, 6(1), 103–112. https://doi.org/10.32996/jcsts.2024.6.1.23
+[0793] Maulana, F., Suseno, H. B., & Matin, I. M. M. (2023). Comparison of single exponential smoothing and Holt-Winter exponential smoothing methods in sales commercial business. In 2023 11th International Conference on Cyber and IT Service Management (CITSM) (pp. 1–6).
+[0794] Mejía, S., & Aguilar, J. (2024). A demand forecasting system of product categories defined by their time series using a hybrid approach of ensemble learning with feature engineering. Computing, 106, 3945–3965. https://doi.org/10.1007/s00607-024-01320-y
+[0795] Mulyawan, M. D., Kumara, I. N. S., Swamardika, I. B. A., & Saputra, K. O. (2021). Kualitas sistem informasi berdasarkan ISO/IEC 25010: Literature review [Information system quality based on ISO/IEC 25010: Literature review]. Majalah Ilmiah Teknologi Elektro, 20(1), 69–76. https://doi.org/10.24843/MITE.2021.v20i01.P02
+[0796] Nielsen, J. (1994). Usability engineering. Morgan Kaufmann.
+[0797] Pall, R., Gauthier, Y., Auer, S., & Mowaswes, W. (2023). Predicting drug shortages using pharmacy data and machine learning. Health Care Management Science, 26, 395–411. https://doi.org/10.1007/s10729-022-09627-y
+[0798] Parilla, E. S., Evangelista, J., Aurelio, R., & Bullalayao, C. (2022). Inventory management practices and service delivery of healthcare facilities in Ilocos Norte Philippines. Logistic and Operation Management Research, 1(1), 16–33. https://doi.org/10.31098/lomr.v1i1.919
+[0799] Praveen, K. B., Kumar, P., J, P., G, P., & Madhuri, J. (2020). Inventory management using machine learning. International Journal of Engineering Research & Technology, 9(6), 42–49.
+[0800] Rushton, R., Lorraine, O., Tiong, J., Karim, M., Dixon, R., Greenshields, W., Marotti, R., & Bretaña, N. A. (2023). Forecasting inventory for the state-wide pharmaceutical service of South Australia. Procedia Computer Science, 219, 1257–1264. https://doi.org/10.1016/j.procs.2023.01.409
+[0801] Sihotang, J. (2023). Optimization of inventory ordering decision in retail business using exponential smoothing approach and decision support system. International Journal of Mechanical Computational and Manufacturing Research, 12(2), 45–52. https://doi.org/10.35335/computational.v12i2.121
+[0802] Soliveres, V. L. L., Hererra, A., & Cedillo, A. K. (2024). Inventory management practices of small-scale pharmacies in the selected towns in Cavite: A marketing perspective. Logistic and Operation Management Research, 3(1), 47–56. https://doi.org/10.31098/lomr.v3i1.2194
+[0803] Stranieri, F., Kouki, C., van Jaarsveld, W., & Stella, F. (2025). Classical and deep reinforcement learning inventory control policies for pharmaceutical supply chains with perishability and non-stationarity. arXiv. https://doi.org/10.48550/arXiv.2501.10895
+[0804] Teleron, J. I. (2023). Efficient management of pharmacy operations through operations research techniques. Engineering and Technology Journal, 8(7), 2462–2472. https://doi.org/10.47191/etj/v8i7.13
+[0805] Yulianti, E., Putri, I. P., & Marcelina, D. (2025). A prognostic system for pharmaceutical inventory forecasting using the trend least squares method at Rakha Medika. Acceleration, Quantum, Information Technology and Algorithm Journal, 2(1), 28–37. https://doi.org/10.62123/aqila.v2i1.80
+[0806] Abdelati, M. H., & Abdelwali, M. H. (2024). Optimizing simple exponential smoothing for time series forecasting in supply chain management. Indonesian Journal of Innovation and Applied Sciences, 4(3), 247–256. https://doi.org/10.47540/ijias.v4i3.1591
+[0807] Kumar, L., Khedlekar, S., & Khedlekar, U. K. (2024). A comparative assessment of Holt-Winters exponential smoothing and autoregressive integrated moving average for inventory optimization in supply chains. Supply Chain Analytics, 8, 100084. https://doi.org/10.1016/j.sca.2024.100084

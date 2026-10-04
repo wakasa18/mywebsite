@@ -1,0 +1,10 @@
+{
+  "appFilesExact": 197,
+  "assetFilesExact": 26,
+  "migrationFilesVerified": 9,
+  "latestMigration": "2026_10_03_000009_add_permanent_delete_flags.php",
+  "fullExport": "Includes every current migration and the current upgrade SQL verbatim",
+  "upgrade": "Includes all four missing current migrations",
+  "oldBranchTrashSql": "Earlier partial update; does not include later deletion flags",
+  "differentCodeFiles": 0
+}
