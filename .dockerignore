@@ -1,0 +1,17 @@
+.git
+.gitignore
+.env
+
+vendor/
+
+writable/cache/*
+writable/logs/*
+writable/session/*
+
+tests/
+
+composer.phar
+public.zip
+
+.vscode/
+.idea/
